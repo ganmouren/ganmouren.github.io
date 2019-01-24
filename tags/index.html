@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="甘某人的博客">
 <meta property="og:description" content="菜鸟每天飞过$QAQ$">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-24T12:07:34.738Z">
+<meta property="og:updated_time" content="2019-01-24T12:16:06.991Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="标签">
 <meta name="twitter:description" content="菜鸟每天飞过$QAQ$">
@@ -430,8 +430,6 @@
                 
               
                 
-              
-                
                   
                 
               
@@ -459,6 +457,15 @@
 
           </div>
           
+
+  
+    <div class="comments" id="gitalk-container">
+    </div>
+
+  
+  
+
+
         </div>
         
           
@@ -510,8 +517,6 @@
                 <div class="site-state-item site-state-tags">
                   <a href="/tags/index.html">
                     
-                    
-                      
                     
                       
                     
@@ -718,6 +723,34 @@
 
   
 
+
+  
+    
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+
+
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: '84a65af00a54a65636ff',
+    clientSecret: 'e2844a72a48a7b7e97d0a9b65debcfe9dd21e832',
+    repo: 'ganmouren.github.io',
+    owner: 'ganmouren',
+    admin: ['ganmouren'],
+    id: md5(location.pathname),
+    distractionFreeMode: 'true'
+  });
+  gitalk.render('gitalk-container');
+</script>
+
+  
 
 
   
