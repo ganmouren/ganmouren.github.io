@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title><![CDATA[倍增求$LCA$]]></title>
-    <url>%2F%E5%80%8D%E5%A2%9E%E6%B1%82LCA%2F</url>
+    <url>%2FLCA%2F</url>
     <content type="text"><![CDATA[好久没有更新了，来写$(shui)$一篇$LCA$的博客。 以前觉得$LCA$(最近公共祖先)是神仙学的东西，$fj$讲的时候我也贼吉尔懵逼，现在看来也没有那么难。 当我们想求$LCA(x,y)$时，如果一格一格跳直到跳到同一位置，不知道会跳到哪一年去，于是我们用到了一个神奇的东西：倍增。 众所周知任何数都可以用二进制，所以我们可以每次跳$2^i$步，大大加快效率。这里我们用$fa[i][j]$代表第$i$号节点往上跳$2^j$步到达的位置。 所以很容易推出来: $fa[i][j]=fa[fa[i][j-1]][j-1]$。 然后跳的具体过程看代码。1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374#include&lt;bits/stdc++.h&gt;#define For(a,x,y) for(int a=x;a&lt;=y;a++)#define Bac(a,x,y) for(int a=x;a&gt;=y;a--)using namespace std;const int N=5e5;const int M=5e5;int n,m,s;int depth[N+5],fa[N+5][25];int lg[N+5];struct Edge&#123; int to,next;&#125;edge[2*M+5];int num_edge,head[N+5];void add_edge(int from,int to)&#123; edge[++num_edge].next=head[from]; edge[num_edge].to=to; head[from]=num_edge;&#125;int lca(int x,int y)&#123; if(depth[y]&lt;depth[x]) swap(x,y); while(depth[x]&lt;depth[y]) y=fa[y][lg[depth[y]-depth[x]]];//先跳到同一深度 if(x==y)return x; Bac(i,lg[depth[x]],0) &#123; if(fa[x][i]!=fa[y][i])//因为我们要跳到它们LCA的下面一层，所以它们肯定不相等，如果相等就代表跳多了 x=fa[x][i],y=fa[y][i]; &#125; return fa[x][0];&#125;void dfs(int x,int fat)&#123; depth[x]=depth[fat]+1; fa[x][0]=fat; for(int i=1;(1&lt;&lt;i)&lt;=depth[x];i++) fa[x][i]=fa[fa[x][i-1]][i-1]; for(int p=head[x];p;p=edge[p].next) if(edge[p].to!=fat)dfs(edge[p].to,x);&#125;int main()&#123; scanf("%d%d%d",&amp;n,&amp;m,&amp;s); int u,v; For(i,1,n-1) &#123; scanf("%d%d",&amp;u,&amp;v); add_edge(u,v); add_edge(v,u); &#125; lg[0]=-1; For(i,1,n) lg[i]=lg[i/2]+1;//优化，预处理log dfs(s,0); int a,b; For(i,1,m) &#123; scanf("%d%d",&amp;a,&amp;b); printf("%d\n",lca(a,b)); &#125; return 0;&#125;]]></content>
       <tags>
         <tag>LCA</tag>
@@ -11,16 +11,16 @@
   </entry>
   <entry>
     <title><![CDATA[Luogu P3787 冰精冻西瓜]]></title>
-    <url>%2FLuogu%20P3787%20%E5%86%B0%E7%B2%BE%E5%86%BB%E8%A5%BF%E7%93%9C%2F</url>
+    <url>%2FLuogu_P3787%2F</url>
     <content type="text"><![CDATA[题目背景盛夏，冰之妖精琪露诺发现了一大片西瓜地，终于可以吃到美味的冻西瓜啦。 题目描述琪露诺是拥有操纵冷气程度的能力的妖精，一天她发现了一片西瓜地。这里有$n$个西瓜，由$n-1$条西瓜蔓连接，形成一个有根树，琪露诺想要把它们冷冻起来慢慢吃。这些西瓜蔓具有神奇的性质，可以将经过它的冷气的寒冷程度放大或缩小，每条西瓜蔓放大/缩小冷气寒冷程度的能力值为$W_i$，表示冷气经过它后，寒冷程度值$x$会变为$x\times w_i$。每个西瓜也有一个寒冷程度值，炎热的夏日，所有西瓜的寒冷程度值初始都为$0$。琪露诺会做出两种动作:①.对着西瓜$i$放出寒冷程度为$x$的冷气。这股冷气顺着西瓜蔓向“西瓜树”的叶子节点蔓延，冷气的寒冷程度会按照上面的规则变化。遇到一个西瓜连了多条西瓜蔓时，每条叶子节点方向的西瓜蔓均会获得与原先寒冷程度相等的冷气。途径的所有西瓜的寒冷程度值都会加上冷气的寒冷程度值。⑨.向你询问西瓜$i$的寒冷程度值是多少。等等，为什么会有⑨？因为笨蛋琪露诺自己也会忘记放了多少冰呢。所以，帮她计算的任务就这么交给你啦。 输入输出格式输入格式：第一行一个整数$n$,表示西瓜的数量。西瓜编号为$1\text{~}n$，$1$为这棵“西瓜树”的根。接下来$n-1$行，每行有两个整数$u,v$和一个实数$w$，表示西瓜$u$和西瓜$v$之间连接有一条藤蔓，它放大/缩小冷气寒冷程度的能力值为$w$。接下来一行一个整数$m$，表示操作的数量。接下来$m$行，每行两个或三个整数。第一个数只能是$1$或$9$。如果为$1$，接下来一个整数$i$和一个实数$x$，表示对西瓜$i$放出寒冷程度为$x$的冷气。如果为$9$，接下来一个整数$i$，表示询问编号为$i$的西瓜的寒冷程度值。输出格式：对于每个操作⑨，输出一行一个实数，表示对应西瓜的寒冷程度值。 输入输出样例输入样例#1：123456789101112131441 2 1.000000002 3 0.000000003 4 1.0000010191 1 3.000000009 29 31 2 1.428560319 49 21 3 4.233333339 29 4 输出样例#1：1234563.000000000.000000000.000000004.428560314.428560314.23333761 说明子任务可能出现如下的特殊性质:“西瓜树”退化为一条链输入数据中的实数均保留$8$位小数，选手的答案被判作正确当且仅当输出与标准答案误差不超过$10^-7$。请特别注意浮点数精度问题。实际数据中，冷气的寒冷程度$x$的范围为$[-0.1,0.1]$(样例中的冷气寒冷程度的范围为$[1,5]$) 这题还蛮毒瘤的，我交了$20$次才过，，，（其实因为我线段树打炸了没发现）一开始看到这题想到暴力，看到数据立马去世。于是我想到了线段树。因为有些边是$0$，我们就把这棵树切成很多棵树遍历。然后我是这么想的，先把树遍历一下，预处理出每个点到其树根的所有$w$之积$w[i]$。然后假设所有冷气都是由根传来的，那么在第$i$个结点释放$x$的冷气就相当于在根节点释放$x/w[i]$的冷气。然后接下来只需要区间更新就行了。这里我用了线段树。区间具体是怎么划分的呢？每个点所管辖的区间即是他所有子节点及其本身。我们在遍历的时候可以把$i$所管辖的区间的最后一个数$right[i]$求出来。查询其实就是单点查询，将该节点的值乘上该节点的$w[i]$就可以了。下面是代码：123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687#include&lt;bits/stdc++.h&gt;#define N 1000000#define ld long doubleusing namespace std;struct Edge&#123; int from,to,next; ld dis;&#125;edge[N+5];int n,m,num_edge,num_node,num_root;int head[N+5],node[N+5],root[N+5],r[N+5];ld w[N+5],addsum[4*N+5],tree[4*N+5];bool vis[N+5];void add_edge(int from,int to,ld dis)&#123; edge[++num_edge].next=head[from]; edge[num_edge].from=from; edge[num_edge].to=to; edge[num_edge].dis=dis; head[from]=num_edge;&#125;void dfs(int i,ld dis)&#123; if(vis[i])return; vis[i]=true; node[i]=++num_node; w[i]=dis; int p=head[i]; while(p)&#123; if(!edge[p].dis) &#123;if(!vis[edge[p].to])root[++num_root]=edge[p].to;&#125; else dfs(edge[p].to,dis*edge[p].dis); p=edge[p].next; &#125; r[i]=num_node;&#125;void pushdown(int k)&#123; if(!addsum[k])return; addsum[k&lt;&lt;1]+=addsum[k]; addsum[k&lt;&lt;1|1]+=addsum[k]; tree[k&lt;&lt;1]+=addsum[k]; tree[k&lt;&lt;1|1]+=addsum[k]; addsum[k]=0; &#125;ld query(int k,int l,int r,int x)&#123; pushdown(k); if(l==r&amp;&amp;x==l)return tree[k]; int mid=(l+r)&gt;&gt;1; if(x&lt;=mid)return query(k&lt;&lt;1,l,mid,x); else return query(k&lt;&lt;1|1,mid+1,r,x);&#125;void add(int k,int l,int r,int x,int y,ld v)&#123; if(l&gt;y||r&lt;x)return; pushdown(k); if(l&gt;=x&amp;&amp;r&lt;=y)&#123; addsum[k]+=v; tree[k]+=v; return; &#125; int mid=(l+r)&gt;&gt;1; if(mid&gt;=x)add(k&lt;&lt;1,l,mid,x,y,v); if(mid&lt;y)add(k&lt;&lt;1|1,mid+1,r,x,y,v);&#125;int main()&#123; scanf("%d",&amp;n); for(int i=1;i&lt;n;i++)&#123; int u,v; ld d; scanf("%d%d%Lf",&amp;u,&amp;v,&amp;d); add_edge(u,v,d); add_edge(v,u,d); &#125; root[++num_root]=1; for(int i=1;i&lt;=num_root;i++)dfs(root[i],1); scanf("%d",&amp;m); for(int i=1;i&lt;=m;i++)&#123; int k,I; ld x; scanf("%d",&amp;k); if(k==1)&#123; scanf("%d%Lf",&amp;I,&amp;x); add(1,1,n,node[I],r[I],x/w[I]); &#125; else&#123; scanf("%d",&amp;I); printf("%.8Lf\n",query(1,1,n,node[I])*w[I]); &#125; &#125; return 0;&#125;]]></content>
       <tags>
-        <tag>线段树</tag>
         <tag>题解</tag>
+        <tag>线段树</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[线段树]]></title>
-    <url>%2F%E7%BA%BF%E6%AE%B5%E6%A0%91%2F</url>
+    <url>%2Fsegment_tree%2F</url>
     <content type="text"><![CDATA[最近在学线段树。线段树具有树的结构特征，对于每一个子节点而言，都表示整个序列中的一段子区间；对于每个叶子节点而言，都表示序列中的单个元素信息；子节点不断向自己的父亲节点传递信息，而父节点存储的信息则是他的每一个子节点信息的整合。因此线段树可以处理很多符合结合律的操作。下面是区间修改区间求值的程序（我懒得打单点修改区间求值和区间修改单调求值了23333）。123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566#include&lt;bits/stdc++.h&gt;#define N 100000#define ll long longusing namespace std;ll n,m,l,r,v,k;ll a[N+5],sum[4*N+5],add[4*N+5];void build(ll k,ll l,ll r)&#123; if(l==r)&#123; sum[k]=a[l]; return; &#125; ll mid=(l+r)&gt;&gt;1; build(k&lt;&lt;1,l,mid); build(k&lt;&lt;1|1,mid+1,r); sum[k]=sum[k&lt;&lt;1]+sum[k&lt;&lt;1|1];&#125;void Add(ll k,ll l,ll r,ll v)&#123; add[k]+=v; sum[k]+=v*(r-l+1);&#125;void pushdown(ll k,ll l,ll r,ll mid)&#123; if(!add[k])return; Add(k&lt;&lt;1,l,mid,add[k]); Add(k&lt;&lt;1|1,mid+1,r,add[k]); add[k]=0;&#125;ll query_sum(ll k,ll l,ll r,ll x,ll y)&#123; if(l&gt;=x&amp;&amp;r&lt;=y)return sum[k]; ll mid=(l+r)&gt;&gt;1,res=0; pushdown(k,l,r,mid); if(x&lt;=mid)res+=query_sum(k&lt;&lt;1,l,mid,x,y); if(y&gt;mid)res+=query_sum(k&lt;&lt;1|1,mid+1,r,x,y); return res;&#125;void change(ll k,ll l,ll r,ll x,ll y,ll v)&#123; if(l&gt;=x&amp;&amp;r&lt;=y)&#123; Add(k,l,r,v); return; &#125; ll mid=(l+r)&gt;&gt;1; pushdown(k,l,r,mid); if(x&lt;=mid)change(k&lt;&lt;1,l,mid,x,y,v); if(y&gt;mid)change(k&lt;&lt;1|1,mid+1,r,x,y,v); sum[k]=sum[k&lt;&lt;1]+sum[k&lt;&lt;1|1];&#125;int main()&#123; scanf("%lld%lld",&amp;n,&amp;m); for(int i=1;i&lt;=n;i++)scanf("%lld",&amp;a[i]); build(1,1,n); for(int i=1;i&lt;=m;i++)&#123; scanf("%lld",&amp;k); switch(k)&#123; case 1:&#123; scanf("%lld%lld%lld",&amp;l,&amp;r,&amp;v); change(1,1,n,l,r,v); break; &#125; case 2:&#123; scanf("%lld%lld",&amp;l,&amp;r); printf("%lld\n",query_sum(1,1,n,l,r)); break; &#125; &#125; &#125; return 0;&#125;]]></content>
       <tags>
         <tag>线段树</tag>
@@ -28,16 +28,16 @@
   </entry>
   <entry>
     <title><![CDATA[Luogu P1195 口袋的天空]]></title>
-    <url>%2FLuogu%20p1195%20%E5%8F%A3%E8%A2%8B%E7%9A%84%E5%A4%A9%E7%A9%BA%2F</url>
+    <url>%2FLuogu_P1195%2F</url>
     <content type="text"><![CDATA[题目背景小杉坐在教室里，透过口袋一样的窗户看口袋一样的天空。有很多云飘在那里，看起来很漂亮，小杉想摘下那样美的几朵云，做成棉花糖。 题目描述给你云朵的个数$N$，再给你$M$个关系，表示哪些云朵可以连在一起。现在小杉要把所有云朵连成$K$个棉花糖，一个棉花糖最少要用掉一朵云，小杉想知道他怎么连，花费的代价最小。 输入输出格式输入格式：每组测试数据的第一行有三个数$N,M,K(1≤N≤1000,1≤M≤10000,1≤K≤10)$接下来M个数每行三个数X,Y,L表示X云和Y云可以通过L的代价连在一起。$(1\le X,Y\le N,0\le L\le 10000)$$30%$的数据$N\le 100,M\le 1000$输出格式：对每组数据输出一行，仅有一个整数，表示最小的代价。如果怎么连都连不出$K$个棉花糖，请输出’$No Answer$’。 输入输出样例输入样例#1：123 1 21 2 1 输出样例#1：11 怎么会有这么裸的模板题。。。还是绿题。。。12345678910111213141516171819202122232425262728293031323334353637#include&lt;bits/stdc++.h&gt;using namespace std;int n,m,k,father[1005],t,ans;struct Edge&#123; int x,y,dis;&#125;edge[10005];bool cmp(Edge x,Edge y)&#123; return x.dis&lt;y.dis;&#125;int find(int x)&#123; if(father[x]!=x)father[x]=find(father[x]); return father[x];&#125;void unionn(int x,int y,int dis)&#123; int a=find(x),b=find(y); father[a]=b; t--; ans+=dis;&#125;int main()&#123; scanf("%d%d%d",&amp;n,&amp;m,&amp;k); if(m&lt;n-k)&#123; printf("No Answer"); return 0; &#125; t=n; for(int i=1;i&lt;=m;i++) scanf("%d%d%d",&amp;edge[i].x,&amp;edge[i].y,&amp;edge[i].dis); sort(edge+1,edge+m+1,cmp); for(int i=1;i&lt;=n;i++)father[i]=i; for(int i=1;i&lt;=m;i++)&#123; if(find(edge[i].x)!=find(edge[i].y))unionn(edge[i].x,edge[i].y,edge[i].dis); if(t==k)break; &#125; printf("%d",ans); return 0;&#125;]]></content>
       <tags>
-        <tag>题解</tag>
         <tag>最小生成树</tag>
+        <tag>题解</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[老婆合集（持续更新）]]></title>
-    <url>%2F%E8%80%81%E5%A9%86%E5%90%88%E9%9B%86%EF%BC%88%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%EF%BC%89%2F</url>
+    <url>%2Fwife%2F</url>
     <content type="text"><![CDATA[你可以选择无视这个文章 老婆列表 血小板 御坂美琴 Rachel·Gardner 小鸟游六花 小野寺小咲 白 Ruby Rose Weiss Schnee Blake Belladonna Yang Xiao Long 筒隐月子 牧濑红莉栖 雪之下雪乃 由比滨结衣 户冢彩加(?) 川崎沙希 一色彩羽 阿斯托尔福(?) 古莉 蓝野亚久亚 夜刀神十香 四糸乃 时崎狂三 诱宵美九 鸢一折纸]]></content>
       <tags>
         <tag>二次元</tag>
@@ -45,7 +45,7 @@
   </entry>
   <entry>
     <title><![CDATA[Luogu P2141 珠心算测验]]></title>
-    <url>%2FLuogu%20p2141%20%E7%8F%A0%E5%BF%83%E7%AE%97%E6%B5%8B%E9%AA%8C%2F</url>
+    <url>%2FLuogu_P2141%2F</url>
     <content type="text"><![CDATA[题目描述珠心算是一种通过在脑中模拟算盘变化来完成快速运算的一种计算技术。珠心算训练，既能够开发智力，又能够为日常生活带来很多便利，因而在很多学校得到普及。某学校的珠心算老师采用一种快速考察珠心算加法能力的测验方法。他随机生成一个正整数集合，集合中的数各不相同，然后要求学生回答：其中有多少个数，恰好等于集合中另外两个（不同的）数之和？最近老师出了一些测验题，请你帮忙求出答案。(本题目为2014NOIP普及T1) 输入输出格式输入格式：共两行，第一行包含一个整数$n$，表示测试题中给出的正整数个数。第二行有$n$个正整数，每两个正整数之间用一个空格隔开，表示测试题中给出的正整数。输出格式：一个整数，表示测验题答案。 ##输入输出样例输入样例#1：1241 2 3 4 输出样例#1：12 说明【样例说明】由$1+2=3$,$1+3=4$，故满足测试要求的答案为2。注意，加数和被加数必须是集合中的两个不同的数。【数据说明】对于$100%$的数据，$3\le n\le 100$，测验题给出的正整数大小不超过$10000$。 本蒟蒻的第一个题解。。。这道题其实很简单。。。1234567891011121314151617#include&lt;bits/stdc++.h&gt;using namespace std;int a[101],n,ans;bool t[20001];//t[i]表示i这个数是否能由集合中的两个数相加而成int main()&#123; cin&gt;&gt;n; for(int i=1;i&lt;=n;i++) cin&gt;&gt;a[i]; for(int i=1;i&lt;=n;i++) for(int j=i+1;j&lt;=n;j++) t[a[i]+a[j]]=true; for(int i=1;i&lt;=n;i++) ans+=t[a[i]]; cout&lt;&lt;ans; return 0;&#125;]]></content>
       <tags>
         <tag>题解</tag>
@@ -53,7 +53,7 @@
   </entry>
   <entry>
     <title><![CDATA[喜报！]]></title>
-    <url>%2F%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%2F</url>
+    <url>%2Ffirst_article%2F</url>
     <content type="text"><![CDATA[在本蒟蒻的不懈努力下…这个博客也算是勉强搭成了，花了好久…感谢网上各位大佬帮助$qwq$]]></content>
       <tags>
         <tag>测试</tag>
