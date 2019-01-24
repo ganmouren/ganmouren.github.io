@@ -512,8 +512,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/24/第一篇博客/" rel="next" title="喜报！">
-                <i class="fa fa-chevron-left"></i> 喜报！
+              <a href="/2018/09/26/p2141 珠心算测验/" rel="next" title="Luogu P2141 珠心算测验">
+                <i class="fa fa-chevron-left"></i> Luogu P2141 珠心算测验
               </a>
             
           </div>
@@ -522,8 +522,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/09/26/p2141 珠心算测验/" rel="prev" title="Luogu P2141 珠心算测验">
-                Luogu P2141 珠心算测验 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/09/28/盘点一下我认识的沙雕（持续更新）/" rel="prev" title="盘点一下我认识的沙雕（持续更新）">
+                盘点一下我认识的沙雕（持续更新） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -547,40 +547,10 @@
           
 
   
-        <div onclick="showGitment()" id="gitment_title" class="gitment_title">显示 Gitment 评论</div>
-        <div id="container" style="display:none"></div>
-        <link rel="stylesheet" href="https://ganmouren.github.io/gitment/style/default.css">
-        <script src="https://ganmouren.github.io/gitment/dist/gitment.browser.js"></script>
-        <script>
-        const myTheme = {
-          render(state, instance) {
-            const container = document.createElement('div');
-            container.lang = "en-US";
-            container.className = 'gitment-container gitment-root-container';
-            container.appendChild(instance.renderHeader(state, instance));
-            container.appendChild(instance.renderEditor(state, instance));
-            container.appendChild(instance.renderComments(state, instance));
-            container.appendChild(instance.renderFooter(state, instance));
-            return container;
-          }
-        }
-        function showGitment() {
-          $("#gitment_title").attr("style", "display:none");
-          $("#container").attr("style", "").addClass("gitment_container");
-          var gitment = new Gitment({
-            id: window.location.pathname,
-            theme: myTheme,
-            owner: 'ganmouren',
-            repo: 'ganmouren.github.io',
-            oauth: {
-              client_id: '69ab1a7184bf58e3199a',
-              client_secret: '7a8096a4de2ce2264c7085e91de65c3f43a62b7f'
-            }
-          });
-          gitment.render('container');
-        }
-        </script>
-    
+    <div class="comments" id="gitalk-container">
+    </div>
+
+  
   
 
 
@@ -871,42 +841,29 @@
 
 
   
-    <!-- LOCAL: You can save these files to your site and update links -->
+    
 
-  
-  <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css">
-<!-- END LOCAL -->
 
-<style>
-#gitment-container a {
-  border-bottom: none;
-}
 
-</style>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+
+
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
 
 <script>
-  function renderGitment() {
-    var gitment = new Gitment({
-      id: window.location.pathname,
-      owner: '',
-      repo: '',
-      
-      oauth: {
-      
-      
-        client_secret: '7a8096a4de2ce2264c7085e91de65c3f43a62b7f',
-      
-        client_id: '69ab1a7184bf58e3199a'
-      }
-    });
-    gitment.render('gitment-container');
-  }
-
-  
-    renderGitment();
-  
+  var gitalk = new Gitalk({
+    clientID: '',
+    clientSecret: '',
+    repo: '',
+    owner: '',
+    admin: [''],
+    id: md5(location.pathname),
+    distractionFreeMode: 'true'
+  });
+  gitalk.render('gitalk-container');
 </script>
 
   
