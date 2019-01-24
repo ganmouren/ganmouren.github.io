@@ -31,8 +31,8 @@
     <url>%2FLuogu_P1195%2F</url>
     <content type="text"><![CDATA[题目背景小杉坐在教室里，透过口袋一样的窗户看口袋一样的天空。有很多云飘在那里，看起来很漂亮，小杉想摘下那样美的几朵云，做成棉花糖。 题目描述给你云朵的个数$N$，再给你$M$个关系，表示哪些云朵可以连在一起。现在小杉要把所有云朵连成$K$个棉花糖，一个棉花糖最少要用掉一朵云，小杉想知道他怎么连，花费的代价最小。 输入输出格式输入格式：每组测试数据的第一行有三个数$N,M,K(1≤N≤1000,1≤M≤10000,1≤K≤10)$接下来M个数每行三个数X,Y,L表示X云和Y云可以通过L的代价连在一起。$(1\le X,Y\le N,0\le L\le 10000)$$30%$的数据$N\le 100,M\le 1000$输出格式：对每组数据输出一行，仅有一个整数，表示最小的代价。如果怎么连都连不出$K$个棉花糖，请输出’$No Answer$’。 输入输出样例输入样例#1：123 1 21 2 1 输出样例#1：11 怎么会有这么裸的模板题。。。还是绿题。。。12345678910111213141516171819202122232425262728293031323334353637#include&lt;bits/stdc++.h&gt;using namespace std;int n,m,k,father[1005],t,ans;struct Edge&#123; int x,y,dis;&#125;edge[10005];bool cmp(Edge x,Edge y)&#123; return x.dis&lt;y.dis;&#125;int find(int x)&#123; if(father[x]!=x)father[x]=find(father[x]); return father[x];&#125;void unionn(int x,int y,int dis)&#123; int a=find(x),b=find(y); father[a]=b; t--; ans+=dis;&#125;int main()&#123; scanf("%d%d%d",&amp;n,&amp;m,&amp;k); if(m&lt;n-k)&#123; printf("No Answer"); return 0; &#125; t=n; for(int i=1;i&lt;=m;i++) scanf("%d%d%d",&amp;edge[i].x,&amp;edge[i].y,&amp;edge[i].dis); sort(edge+1,edge+m+1,cmp); for(int i=1;i&lt;=n;i++)father[i]=i; for(int i=1;i&lt;=m;i++)&#123; if(find(edge[i].x)!=find(edge[i].y))unionn(edge[i].x,edge[i].y,edge[i].dis); if(t==k)break; &#125; printf("%d",ans); return 0;&#125;]]></content>
       <tags>
-        <tag>最小生成树</tag>
         <tag>题解</tag>
+        <tag>最小生成树</tag>
       </tags>
   </entry>
   <entry>
