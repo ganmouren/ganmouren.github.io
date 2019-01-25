@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="甘某人的博客">
 <meta property="og:description" content="这里会简单记录我学习的基础数论。这里的证明可能都不大严谨，仅供参考。 欧几里得算法如果我们想要求 $gcd(a,b)(a\text{与}b$的最大公因数$)$ ，最简单的方式便是枚举，但这太慢了。 于是我们有了我们的辗转相除法，也就是欧几里得算法，它可以在 $O(log_2b)$ 的复杂度内求出 $gcd(a,b)$ 。 $$gcd(a,b) = gcd(b,a\bmod b)$$ 证明设 $r=">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-25T15:14:52.183Z">
+<meta property="og:updated_time" content="2019-01-25T15:51:40.318Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数论学习">
 <meta name="twitter:description" content="这里会简单记录我学习的基础数论。这里的证明可能都不大严谨，仅供参考。 欧几里得算法如果我们想要求 $gcd(a,b)(a\text{与}b$的最大公因数$)$ ，最简单的方式便是枚举，但这太慢了。 于是我们有了我们的辗转相除法，也就是欧几里得算法，它可以在 $O(log_2b)$ 的复杂度内求出 $gcd(a,b)$ 。 $$gcd(a,b) = gcd(b,a\bmod b)$$ 证明设 $r=">
@@ -412,7 +412,7 @@
                 
               
 
-              <time title="创建时间：2019-01-25 16:49:40 / 修改时间：23:14:52" itemprop="dateCreated datePublished" datetime="2019-01-25T16:49:40+08:00">2019-01-25</time>
+              <time title="创建时间：2019-01-25 16:49:40 / 修改时间：23:51:40" itemprop="dateCreated datePublished" datetime="2019-01-25T16:49:40+08:00">2019-01-25</time>
             
 
             
@@ -498,7 +498,7 @@
 <p>因此我们可以用快速幂求出 $a^{p-2} \pmod{p}$ 的值，这个数就是 $a$ 的逆元了。</p>
 <h4 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">qpow</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b, <span class="keyword">int</span> p)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> res = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span> (b)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (b &amp; <span class="number">1</span>)</span><br><span class="line">			res = res * a % p;</span><br><span class="line">		a = a * a % p;</span><br><span class="line">		b &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x = qpow(a, p - <span class="number">2</span>, p);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="线性递推"><a href="#线性递推" class="headerlink" title="线性递推"></a>线性递推</h3><p>这个可以用来求一连串数组对于 $\bmod p$ 的逆元。</p>
-<p>$1^{-1} \equiv 1 \pmod{p}$</p>
+<p>首先我们知道$1^{-1} \equiv 1 \pmod{p}$</p>
 <p>设 $k = \lfloor\dfrac{p}{i}\rfloor,\,r = p \bmod{i}$</p>
 <p>$k \times i + r \equiv 0 \pmod{p}$</p>
 <p>两边同时乘上 $i^{-1},\,r^{-1}$</p>
