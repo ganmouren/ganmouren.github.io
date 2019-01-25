@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="这里会简单记录我学习的基础数论。这里的证明可能都不大严谨，仅供参考。 欧几里得算法如果我们想要求 $gcd(a,b)(a\text{与}b$的最大公因数$)$ ，最简单的方式便是枚举，但这太慢了。于是我们有了我们的辗转相除法，也就是欧几里得算法，它可以在 $O(log_2b)$ 的复杂度内求出 $gcd(a,b)$ 。$$gcd(a,b) = gcd(b,a\bmod b)$$ 证明设 $r=a\">
+  <meta name="description" content="这里会简单记录我学习的基础数论。这里的证明可能都不大严谨，仅供参考。 欧几里得算法如果我们想要求 $gcd(a,b)(a\text{与}b$的最大公因数$)$ ，最简单的方式便是枚举，但这太慢了。 于是我们有了我们的辗转相除法，也就是欧几里得算法，它可以在 $O(log_2b)$ 的复杂度内求出 $gcd(a,b)$ 。 $$gcd(a,b) = gcd(b,a\bmod b)$$ 证明设 $r=">
 <meta name="keywords" content="数论">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数论学习">
 <meta property="og:url" content="http://yoursite.com/Number_theory/index.html">
 <meta property="og:site_name" content="甘某人的博客">
-<meta property="og:description" content="这里会简单记录我学习的基础数论。这里的证明可能都不大严谨，仅供参考。 欧几里得算法如果我们想要求 $gcd(a,b)(a\text{与}b$的最大公因数$)$ ，最简单的方式便是枚举，但这太慢了。于是我们有了我们的辗转相除法，也就是欧几里得算法，它可以在 $O(log_2b)$ 的复杂度内求出 $gcd(a,b)$ 。$$gcd(a,b) = gcd(b,a\bmod b)$$ 证明设 $r=a\">
+<meta property="og:description" content="这里会简单记录我学习的基础数论。这里的证明可能都不大严谨，仅供参考。 欧几里得算法如果我们想要求 $gcd(a,b)(a\text{与}b$的最大公因数$)$ ，最简单的方式便是枚举，但这太慢了。 于是我们有了我们的辗转相除法，也就是欧几里得算法，它可以在 $O(log_2b)$ 的复杂度内求出 $gcd(a,b)$ 。 $$gcd(a,b) = gcd(b,a\bmod b)$$ 证明设 $r=">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-25T10:07:07.997Z">
+<meta property="og:updated_time" content="2019-01-25T11:54:02.359Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数论学习">
-<meta name="twitter:description" content="这里会简单记录我学习的基础数论。这里的证明可能都不大严谨，仅供参考。 欧几里得算法如果我们想要求 $gcd(a,b)(a\text{与}b$的最大公因数$)$ ，最简单的方式便是枚举，但这太慢了。于是我们有了我们的辗转相除法，也就是欧几里得算法，它可以在 $O(log_2b)$ 的复杂度内求出 $gcd(a,b)$ 。$$gcd(a,b) = gcd(b,a\bmod b)$$ 证明设 $r=a\">
+<meta name="twitter:description" content="这里会简单记录我学习的基础数论。这里的证明可能都不大严谨，仅供参考。 欧几里得算法如果我们想要求 $gcd(a,b)(a\text{与}b$的最大公因数$)$ ，最简单的方式便是枚举，但这太慢了。 于是我们有了我们的辗转相除法，也就是欧几里得算法，它可以在 $O(log_2b)$ 的复杂度内求出 $gcd(a,b)$ 。 $$gcd(a,b) = gcd(b,a\bmod b)$$ 证明设 $r=">
 
 
 
@@ -412,7 +412,7 @@
                 
               
 
-              <time title="创建时间：2019-01-25 16:49:40 / 修改时间：18:07:07" itemprop="dateCreated datePublished" datetime="2019-01-25T16:49:40+08:00">2019-01-25</time>
+              <time title="创建时间：2019-01-25 16:49:40 / 修改时间：19:54:02" itemprop="dateCreated datePublished" datetime="2019-01-25T16:49:40+08:00">2019-01-25</time>
             
 
             
@@ -459,15 +459,27 @@
 
       
         <p>这里会简单记录我学习的基础数论。这里的证明可能都不大严谨，仅供参考。</p>
-<h3 id="欧几里得算法"><a href="#欧几里得算法" class="headerlink" title="欧几里得算法"></a>欧几里得算法</h3><p>如果我们想要求 $gcd(a,b)(a\text{与}b$的最大公因数$)$ ，最简单的方式便是枚举，但这太慢了。<br>于是我们有了我们的辗转相除法，也就是欧几里得算法，它可以在 $O(log_2b)$ 的复杂度内求出 $gcd(a,b)$ 。<br>$$gcd(a,b) = gcd(b,a\bmod b)$$</p>
-<h4 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h4><p>设 $r=a\bmod b$ ，$d$ 为 $a,\,b$ 任意一个公约数。<br>则 $a=kb+r,\;a\equiv b\equiv 0 \pmod{d}$<br>$\therefore a-kb\equiv r \equiv 0 \pmod{d}$<br>$\therefore d\,|\,b,\,d\,|\,a\bmod b$<br>$\therefore \forall\,d\, | \,gcd(a,b)$<br>$\therefore gcd(a,b)=gcd(b,a\bmod b)$</p>
+<h3 id="欧几里得算法"><a href="#欧几里得算法" class="headerlink" title="欧几里得算法"></a>欧几里得算法</h3><p>如果我们想要求 $gcd(a,b)(a\text{与}b$的最大公因数$)$ ，最简单的方式便是枚举，但这太慢了。</p>
+<p>于是我们有了我们的辗转相除法，也就是欧几里得算法，它可以在 $O(log_2b)$ 的复杂度内求出 $gcd(a,b)$ 。</p>
+<p>$$gcd(a,b) = gcd(b,a\bmod b)$$</p>
+<h4 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h4><p>设 $r=a\bmod b$ ，$d$ 为 $a,\,b$ 任意一个公约数。</p>
+<p>则 $a=kb+r,\;a\equiv b\equiv 0 \pmod{d}$</p>
+<p>$\therefore a-kb\equiv r \equiv 0 \pmod{d}$</p>
+<p>$\therefore d\,|\,b,\,d\,|\,a\bmod b$</p>
+<p>$\therefore \forall\,d\, | \,gcd(a,b)$</p>
+<p>$\therefore gcd(a,b)=gcd(b,a\bmod b)$</p>
 <p>要注意边界：$b=0$ 时，$gcd(a,b)=a$</p>
 <h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(a, b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> !b ? a : gcd(b, a % b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <hr>
 <h3 id="扩展欧几里得"><a href="#扩展欧几里得" class="headerlink" title="扩展欧几里得"></a>扩展欧几里得</h3><p>扩展欧几里得用于在已知自然数 $a,b$ ，求解 $ax+by=gcd(a,b)$ 的 $(x,y)$ 的整数解时。</p>
-<p>$ax+by=gcd(a,b)$<br>$=gcd(b,a\bmod b)$<br>$\Rightarrow bx+(a\bmod b)\,y$<br>$=bx+(a-\lfloor\dfrac{a}{b}\rfloor\,b)\,y$<br>$=ay+b\,(x-\lfloor\dfrac{a}{b}\rfloor\,y)$</p>
-<p>所以 $x$ 变成了 $y$ ， $y$ 变成了 $x-\lfloor\dfrac{a}{b}\rfloor\,y$<br>于是我们可以愉快地递归求解。这里也需要注意边界： $b=0$ 时，$a=1,\,ax+by=1$ ，因此 $x=1,y=0$</p>
+<p>$ax+by=gcd(a,b)$</p>
+<p>$=gcd(b,a\bmod b)$</p>
+<p>$\Rightarrow bx+(a\bmod b)\,y$</p>
+<p>$=bx+(a-\lfloor\dfrac{a}{b}\rfloor\,b)\,y$</p>
+<p>$=ay+b\,(x-\lfloor\dfrac{a}{b}\rfloor\,y)$</p>
+<p>所以 $x$ 变成了 $y$ ， $y$ 变成了 $x-\lfloor\dfrac{a}{b}\rfloor\,y$</p>
+<p>于是我们可以愉快地递归求解。这里也需要注意边界： $b=0$ 时，$a=1,\,ax+by=1$ ，因此 $x=1,y=0$</p>
 <h4 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">exgcd</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b, <span class="keyword">int</span> &amp;x, <span class="keyword">int</span> &amp;y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (!b)</span><br><span class="line">		x = <span class="number">1</span>, y = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		exgcd(b, a % b, y, x), y -= a / b * x;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
