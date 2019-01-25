@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="甘某人的博客">
 <meta property="og:description" content="题目描述有 $n$ 对情侣来到电影院观看电影。在电影院，恰好留有 $n$ 排座位，每排包含 $2$ 个座位，共 $2\times n$ 个座位。 现在，每个人将会随机坐在某一个位置上，且恰好将这 $2\times n$ 个座位坐满。 如果一对情侣坐在了同一排的座位上，那么我们称这对情侣是和睦的。 你的任务是求出共有多少种不同的就坐方案满足恰好有 $k$ 对情侣是和睦的。 两种就坐方案不同当且仅当存">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-25T12:45:30.268Z">
+<meta property="og:updated_time" content="2019-01-25T12:51:18.796Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Luogu P4931 情侣？给我烧了！（加强版）">
 <meta name="twitter:description" content="题目描述有 $n$ 对情侣来到电影院观看电影。在电影院，恰好留有 $n$ 排座位，每排包含 $2$ 个座位，共 $2\times n$ 个座位。 现在，每个人将会随机坐在某一个位置上，且恰好将这 $2\times n$ 个座位坐满。 如果一对情侣坐在了同一排的座位上，那么我们称这对情侣是和睦的。 你的任务是求出共有多少种不同的就坐方案满足恰好有 $k$ 对情侣是和睦的。 两种就坐方案不同当且仅当存">
@@ -412,7 +412,7 @@
                 
               
 
-              <time title="创建时间：2019-01-25 20:10:13 / 修改时间：20:45:30" itemprop="dateCreated datePublished" datetime="2019-01-25T20:10:13+08:00">2019-01-25</time>
+              <time title="创建时间：2019-01-25 20:10:13 / 修改时间：20:51:18" itemprop="dateCreated datePublished" datetime="2019-01-25T20:10:13+08:00">2019-01-25</time>
             
 
             
@@ -481,7 +481,7 @@
 <p>接下来就是最重要的错排部分。</p>
 <p>我们令 $f(x)$ 为 $x$ 对情侣不坐在一起的方案数。</p>
 <p>很明显第一排 $2$ 个不是情侣的人的坐法是 $2n \times (2n-2)$</p>
-<p>接下来我们考虑第一排的 $2$ 个人的那 $2$ 个情侣</p>
+<p>接下来我们考虑和第一排坐的 $2$ 个人的情侣</p>
 <ul>
 <li><p>坐在一起，也就是在剩下 $n-1$ 排选一排，转换为剩下 $n-2$ 排情侣需要错排的子问题。注意这两个人是可以换着坐的。 $2 \times (n-1) \times f(n-2)$</p>
 </li>
