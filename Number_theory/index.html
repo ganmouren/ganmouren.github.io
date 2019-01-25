@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="甘某人的博客">
 <meta property="og:description" content="这里会简单记录我学习的基础数论。这里的证明可能都不大严谨，仅供参考。 欧几里得算法如果我们想要求 $gcd(a,b)(a\text{与}b$的最大公因数$)$ ，最简单的方式便是枚举，但这太慢了。 于是我们有了我们的辗转相除法，也就是欧几里得算法，它可以在 $O(log_2b)$ 的复杂度内求出 $gcd(a,b)$ 。 $$gcd(a,b) = gcd(b,a\bmod b)$$ 证明设 $r=">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-25T11:54:02.359Z">
+<meta property="og:updated_time" content="2019-01-25T12:06:01.755Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数论学习">
 <meta name="twitter:description" content="这里会简单记录我学习的基础数论。这里的证明可能都不大严谨，仅供参考。 欧几里得算法如果我们想要求 $gcd(a,b)(a\text{与}b$的最大公因数$)$ ，最简单的方式便是枚举，但这太慢了。 于是我们有了我们的辗转相除法，也就是欧几里得算法，它可以在 $O(log_2b)$ 的复杂度内求出 $gcd(a,b)$ 。 $$gcd(a,b) = gcd(b,a\bmod b)$$ 证明设 $r=">
@@ -412,7 +412,7 @@
                 
               
 
-              <time title="创建时间：2019-01-25 16:49:40 / 修改时间：19:54:02" itemprop="dateCreated datePublished" datetime="2019-01-25T16:49:40+08:00">2019-01-25</time>
+              <time title="创建时间：2019-01-25 16:49:40 / 修改时间：20:06:01" itemprop="dateCreated datePublished" datetime="2019-01-25T16:49:40+08:00">2019-01-25</time>
             
 
             
@@ -469,7 +469,7 @@
 <p>$\therefore \forall\,d\, | \,gcd(a,b)$</p>
 <p>$\therefore gcd(a,b)=gcd(b,a\bmod b)$</p>
 <p>要注意边界：$b=0$ 时，$gcd(a,b)=a$</p>
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(a, b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> !b ? a : gcd(b, a % b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> !b ? a : gcd(b, a % b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <hr>
 <h3 id="扩展欧几里得"><a href="#扩展欧几里得" class="headerlink" title="扩展欧几里得"></a>扩展欧几里得</h3><p>扩展欧几里得用于在已知自然数 $a,b$ ，求解 $ax+by=gcd(a,b)$ 的 $(x,y)$ 的整数解时。</p>
