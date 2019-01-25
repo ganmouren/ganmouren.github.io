@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="甘某人的博客">
 <meta property="og:description" content="题目描述有 $n$ 对情侣来到电影院观看电影。在电影院，恰好留有 $n$ 排座位，每排包含 $2$ 个座位，共 $2\times n$ 个座位。 现在，每个人将会随机坐在某一个位置上，且恰好将这 $2\times n$ 个座位坐满。 如果一对情侣坐在了同一排的座位上，那么我们称这对情侣是和睦的。 你的任务是求出共有多少种不同的就坐方案满足恰好有 $k$ 对情侣是和睦的。 两种就坐方案不同当且仅当存">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-25T13:18:14.754Z">
+<meta property="og:updated_time" content="2019-01-25T14:17:35.718Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Luogu P4931 情侣？给我烧了！（加强版）">
 <meta name="twitter:description" content="题目描述有 $n$ 对情侣来到电影院观看电影。在电影院，恰好留有 $n$ 排座位，每排包含 $2$ 个座位，共 $2\times n$ 个座位。 现在，每个人将会随机坐在某一个位置上，且恰好将这 $2\times n$ 个座位坐满。 如果一对情侣坐在了同一排的座位上，那么我们称这对情侣是和睦的。 你的任务是求出共有多少种不同的就坐方案满足恰好有 $k$ 对情侣是和睦的。 两种就坐方案不同当且仅当存">
@@ -412,7 +412,7 @@
                 
               
 
-              <time title="创建时间：2019-01-25 20:10:13 / 修改时间：21:18:14" itemprop="dateCreated datePublished" datetime="2019-01-25T20:10:13+08:00">2019-01-25</time>
+              <time title="创建时间：2019-01-25 20:10:13 / 修改时间：22:17:35" itemprop="dateCreated datePublished" datetime="2019-01-25T20:10:13+08:00">2019-01-25</time>
             
 
             
@@ -477,7 +477,7 @@
 <p>对于 $40\%$ 的数据，满足 $1 \leq n \leq 3 \times 10^3$</p>
 <p>对于 $100\%$ 的数据，满足 $1 \leq T \leq 2 \times 10^5,1 \leq n \leq 5 \times 10^6, 0 \leq k \leq n$</p>
 <hr>
-<p>这题看上去很难，仔细思考一下的话也不是很复杂。</p>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>这题看上去很难，仔细思考一下的话也不是很复杂。</p>
 <p>首先我们要在 $n$ 个情侣中选出 $k$ 对。 $C_n^k$</p>
 <p>然后在在 $n$ 排座位中选出 $k$ 排给这 $k$ 对情侣坐。 $k$ 排可以任意排列。 $C_n^k \times k!=A_n^k$</p>
 <p>每排的 $2$ 个人可以换位置。 $2^k$</p>
@@ -710,7 +710,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输入输出格式"><span class="nav-number">2.</span> <span class="nav-text">输入输出格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输入输出样例"><span class="nav-number">3.</span> <span class="nav-text">输入输出样例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#说明"><span class="nav-number">4.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">5.</span> <span class="nav-text">代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输入输出格式"><span class="nav-number">2.</span> <span class="nav-text">输入输出格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输入输出样例"><span class="nav-number">3.</span> <span class="nav-text">输入输出样例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#说明"><span class="nav-number">4.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题解"><span class="nav-number">5.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">6.</span> <span class="nav-text">代码</span></a></li></ol></div>
             
 
           </div>
