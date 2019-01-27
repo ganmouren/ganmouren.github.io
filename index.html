@@ -413,12 +413,24 @@
                 
               
 
-              <time title="创建时间：2019-01-25 20:10:13 / 修改时间：22:17:35" itemprop="dateCreated datePublished" datetime="2019-01-25T20:10:13+08:00">2019-01-25</time>
+              <time title="创建时间：2019-01-25 20:10:13" itemprop="dateCreated datePublished" datetime="2019-01-25T20:10:13+08:00">2019-01-25</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-01-27 14:53:45" itemprop="dateModified" datetime="2019-01-27T14:53:45+08:00">2019-01-27</time>
               
             
           </span>
@@ -583,7 +595,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-01-26 15:46:27" itemprop="dateModified" datetime="2019-01-26T15:46:27+08:00">2019-01-26</time>
+                <time title="修改时间：2019-01-27 15:05:15" itemprop="dateModified" datetime="2019-01-27T15:05:15+08:00">2019-01-27</time>
               
             
           </span>
@@ -620,15 +632,18 @@
         
           <p>这里会简单记录我学习的基础数论。这里的证明可能都不大严谨，仅供参考。</p>
 <h1 id="欧几里得算法"><a href="#欧几里得算法" class="headerlink" title="欧几里得算法"></a>欧几里得算法</h1><p>如果我们想要求 $gcd(a,b)(a\text{与}b$的最大公因数$)$ ，最简单的方式便是枚举，但这太慢了。</p>
-<p>于是我们有了我们的辗转相除法，也就是欧几里得算法，它可以在 $O(log_2b)$ 的复杂度内求出 $gcd(a,b)$ 。</p>
-<p>$$gcd(a,b) = gcd(b,a\bmod b)$$</p>
-<h2 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h2><p>设 $r=a\bmod b$ ，$d$ 为 $a,\,b$ 任意一个公约数。</p>
+<p>于是我们有了我们的辗转相除法，也就是欧几里得算法，它可以在 $O(log(a+b))$ 的复杂度内求出 $gcd(a,b)$ 。</p>
+<p>$$\forall a,b \in \mathbb{N}, b \not = 0,\quad gcd(a,b) = gcd(b,a\bmod b)$$</p>
+<h2 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h2><p>$a &lt; b$ 时</p>
+<p>$gcd(b,a \bmod b)=gcd(b,a)=gcd(a,b)$</p>
+<p>$a \geq b$ 时</p>
+<p>设 $r=a\bmod b$ ，$d$ 为 $a,\,b$ 任意一个公约数。</p>
 <p>则 $a=kb+r,\;a\equiv b\equiv 0 \pmod{d}$</p>
 <p>$\therefore a-kb\equiv r \equiv 0 \pmod{d}$</p>
 <p>$\therefore d\,|\,b,\,d\,|\,a\bmod b$</p>
-<p>$\because \forall\,d\, | \,gcd(a,b)$ 均满足这个性质</p>
-<p>$\therefore gcd(a,b)=gcd(b,a\bmod b)$</p>
-<p>要注意边界：$b=0$ 时，$gcd(a,b)=a$</p>
+<p>所以 $a,b$ 和 $b, a \bmod b$ 的公约数集合是相同的，它们的最大公约数必然也相等。</p>
+<p>$\therefore gcd(a,b)=gcd(b, a \bmod b)$</p>
+<p>要注意边界：$b = 0$ 时，$gcd(a,b) = a$</p>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> !b ? a : gcd(b, a % b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           

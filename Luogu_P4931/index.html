@@ -97,14 +97,14 @@
 
 
   <meta name="description" content="题目描述有 $n$ 对情侣来到电影院观看电影。在电影院，恰好留有 $n$ 排座位，每排包含 $2$ 个座位，共 $2\times n$ 个座位。 现在，每个人将会随机坐在某一个位置上，且恰好将这 $2\times n$ 个座位坐满。 如果一对情侣坐在了同一排的座位上，那么我们称这对情侣是和睦的。 你的任务是求出共有多少种不同的就坐方案满足恰好有 $k$ 对情侣是和睦的。 两种就坐方案不同当且仅当存">
-<meta name="keywords" content="数论,题解">
+<meta name="keywords" content="题解,数论">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Luogu P4931 情侣？给我烧了！（加强版）">
 <meta property="og:url" content="http://yoursite.com/Luogu_P4931/index.html">
 <meta property="og:site_name" content="甘某人的博客">
 <meta property="og:description" content="题目描述有 $n$ 对情侣来到电影院观看电影。在电影院，恰好留有 $n$ 排座位，每排包含 $2$ 个座位，共 $2\times n$ 个座位。 现在，每个人将会随机坐在某一个位置上，且恰好将这 $2\times n$ 个座位坐满。 如果一对情侣坐在了同一排的座位上，那么我们称这对情侣是和睦的。 你的任务是求出共有多少种不同的就坐方案满足恰好有 $k$ 对情侣是和睦的。 两种就坐方案不同当且仅当存">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-25T14:17:35.718Z">
+<meta property="og:updated_time" content="2019-01-27T06:53:45.746Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Luogu P4931 情侣？给我烧了！（加强版）">
 <meta name="twitter:description" content="题目描述有 $n$ 对情侣来到电影院观看电影。在电影院，恰好留有 $n$ 排座位，每排包含 $2$ 个座位，共 $2\times n$ 个座位。 现在，每个人将会随机坐在某一个位置上，且恰好将这 $2\times n$ 个座位坐满。 如果一对情侣坐在了同一排的座位上，那么我们称这对情侣是和睦的。 你的任务是求出共有多少种不同的就坐方案满足恰好有 $k$ 对情侣是和睦的。 两种就坐方案不同当且仅当存">
@@ -412,12 +412,24 @@
                 
               
 
-              <time title="创建时间：2019-01-25 20:10:13 / 修改时间：22:17:35" itemprop="dateCreated datePublished" datetime="2019-01-25T20:10:13+08:00">2019-01-25</time>
+              <time title="创建时间：2019-01-25 20:10:13" itemprop="dateCreated datePublished" datetime="2019-01-25T20:10:13+08:00">2019-01-25</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-01-27 14:53:45" itemprop="dateModified" datetime="2019-01-27T14:53:45+08:00">2019-01-27</time>
               
             
           </span>
@@ -492,7 +504,7 @@
 </li>
 </ul>
 <p>那么我们 $f$ 的公式也就出来了。</p>
-<p>$$f(n)=2n \times (2n-2) \times [f(n-1) + 2 \times (n-1) \times f(n-2)]$$</p>
+<p>$$f(n)=2n \times (2n-2) \times (f(n-1) + 2 \times (n-1) \times f(n-2))$$</p>
 <p>于是结合上面的式子，就可以得到：</p>
 <p>$$ans=C_n^k \times A_n^k \times 2^k \times f(n-k)$$</p>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> p = <span class="number">998244353</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">5e6</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll; </span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> T;</span><br><span class="line">ll n, k;</span><br><span class="line">ll fac[N + <span class="number">5</span>], inv_fac[N + <span class="number">5</span>];</span><br><span class="line">ll f[N + <span class="number">5</span>];</span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">C</span><span class="params">(ll n, ll m)</span> <span class="comment">// C(n, m) = n! / [(n - m)! * m!] </span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (n &lt; m)</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">return</span> fac[n] * inv_fac[n - m] % p * inv_fac[m] % p;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">A</span><span class="params">(ll n, ll m)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> fac[n] * inv_fac[n - m] % p;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">qpow</span><span class="params">(ll a, ll b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	ll res = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span> (b)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (b &amp; <span class="number">1</span>)</span><br><span class="line">			res = res * a % p;</span><br><span class="line">		a = a * a % p;</span><br><span class="line">		b &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">pre</span><span class="params">()</span> <span class="comment">// 处理乘法逆元 &amp; 递推f</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	fac[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">register</span> <span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i ++)</span><br><span class="line">		fac[i] = fac[i - <span class="number">1</span>] * i % p;</span><br><span class="line">	inv_fac[<span class="number">0</span>] = inv_fac[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">register</span> <span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= N; i ++)</span><br><span class="line">		inv_fac[i] = (p - p / i) * inv_fac[p % i] % p;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">register</span> <span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= N; i ++)</span><br><span class="line">		inv_fac[i] = inv_fac[i] * inv_fac[i - <span class="number">1</span>] % p; </span><br><span class="line">	f[<span class="number">0</span>] = <span class="number">1</span>, f[<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">register</span> <span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= N; i ++)</span><br><span class="line">		f[i] = ((((i - <span class="number">1</span>) &lt;&lt; <span class="number">1</span>) % p * f[i - <span class="number">2</span>] % p + f[i - <span class="number">1</span>]) % p) * <span class="number">4</span> % p * i % p * (i - <span class="number">1</span>) % p;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	pre();</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;T);</span><br><span class="line">	<span class="keyword">while</span> (T --)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%lld%lld"</span>, &amp;n, &amp;k);</span><br><span class="line">		ll ans = C(n, k) % p;</span><br><span class="line">		ans = ans * A(n, k) % p;</span><br><span class="line">		ans = ans * qpow((ll)<span class="number">2</span>, k) % p;</span><br><span class="line">		ans = ans * f[n - k] % p;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%lld\n"</span>, ans);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -518,9 +530,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/数论/" rel="tag"> <i class="fa fa-tag"></i> 数论</a>
-          
             <a href="/tags/题解/" rel="tag"> <i class="fa fa-tag"></i> 题解</a>
+          
+            <a href="/tags/数论/" rel="tag"> <i class="fa fa-tag"></i> 数论</a>
           
         </div>
       
