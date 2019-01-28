@@ -782,6 +782,16 @@
 
       
 	  
+	  <p><br></p>
+      <div>
+        <div style="display: table-cell; vertical-align: top; color:#B2B7F2; font-size:24px; font-weight:bold; text-align:left;">“</div>
+        <div style="display: table-cell; text-align: left; vertical-align: middle; padding: 0.8em 0.2em 1em 0.2em"><b><span style="color:black;"><span id="hitokoto-content"></span></span></b></div>
+        <div style="display: table-cell; vertical-align: bottom; color:#B2B7F2; font-size:24px; font-weight:bold; text-align:left;">”</div>
+      </div>
+      <div style="text-align: right; font-size: 0.8em; color: black; font-weight:bold;" id="hitokoto-from"></div>
+	  <p><br></p>
+
+	  
 	  
 	  <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
 	  <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
@@ -932,6 +942,12 @@
   <script src="/js/src/motion.js?v=6.7.0"></script>
 
 
+<script type="text/javascript">
+	$.get('https://v1.hitokoto.cn/?c=a', function (data) {
+		$('#hitokoto-content').css('display', '').text(data.hitokoto);
+		$('#hitokoto-from').css('display', '').text('——' + '「' + data.from +'」');
+	});
+</script>
 
   
   
