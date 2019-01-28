@@ -97,14 +97,14 @@
 
 
   <meta name="description" content="题目描述给出一 $个n \times n$ 的矩阵，矩阵中，有些格子被染成白色，有些格子被染成黑色，现要求矩阵中白色矩形的数量。">
-<meta name="keywords" content="二维前缀和,暴力,题解,Luogu">
+<meta name="keywords" content="题解,Luogu,暴力,二维前缀和">
 <meta property="og:type" content="article">
 <meta property="og:title" content="矩形">
 <meta property="og:url" content="http://yoursite.com/Luogu_P1191/index.html">
 <meta property="og:site_name" content="甘某人的博客">
 <meta property="og:description" content="题目描述给出一 $个n \times n$ 的矩阵，矩阵中，有些格子被染成白色，有些格子被染成黑色，现要求矩阵中白色矩形的数量。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-28T06:42:43.502Z">
+<meta property="og:updated_time" content="2019-01-28T06:45:40.556Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="矩形">
 <meta name="twitter:description" content="题目描述给出一 $个n \times n$ 的矩阵，矩阵中，有些格子被染成白色，有些格子被染成黑色，现要求矩阵中白色矩形的数量。">
@@ -412,7 +412,7 @@
                 
               
 
-              <time title="创建时间：2019-01-28 14:08:08 / 修改时间：14:42:43" itemprop="dateCreated datePublished" datetime="2019-01-28T14:08:08+08:00">2019-01-28</time>
+              <time title="创建时间：2019-01-28 14:08:08 / 修改时间：14:45:40" itemprop="dateCreated datePublished" datetime="2019-01-28T14:08:08+08:00">2019-01-28</time>
             
 
             
@@ -473,7 +473,7 @@
 <hr>
 <h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>写这道题的题解主要还是为了巩固一下二维前缀和。</p>
 <p>为啥这题能用二维前缀和解呢，因为我们可以把这个矩阵看成一个 $01$ 矩阵。</p>
-<p>$\begin{matrix}W&amp;W&amp;B&amp;W\\B&amp;B&amp;W&amp;B\\W&amp;B&amp;W&amp;W\\W&amp;B&amp;W&amp;B\end{matrix} \quad \Rightarrow \quad \begin{matrix}0&amp;0&amp;1&amp;0\\1&amp;1&amp;0&amp;1\\0&amp;1&amp;0&amp;0\\0&amp;1&amp;0&amp;1\end{matrix}$</p>
+<p>$$\begin{matrix}W&amp;W&amp;B&amp;W\\B&amp;B&amp;W&amp;B\\W&amp;B&amp;W&amp;W\\W&amp;B&amp;W&amp;B\end{matrix} \quad \Rightarrow \quad \begin{matrix}0&amp;0&amp;1&amp;0\\1&amp;1&amp;0&amp;1\\0&amp;1&amp;0&amp;0\\0&amp;1&amp;0&amp;1\end{matrix}$$</p>
 <p>很明显的可以看出，若一个矩阵为白色矩阵，则其包含的数之和为 $0$ 。所以我们可以暴力 $O(n^4)$ 枚举每个矩阵判断。</p>
 <p><del>然而这题能用二维前缀和做的根本原因是数据太水</del></p>
 <p>那么接下来就是二维前缀和的部分。</p>
@@ -509,13 +509,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/二维前缀和/" rel="tag"> <i class="fa fa-tag"></i> 二维前缀和</a>
-          
-            <a href="/tags/暴力/" rel="tag"> <i class="fa fa-tag"></i> 暴力</a>
-          
             <a href="/tags/题解/" rel="tag"> <i class="fa fa-tag"></i> 题解</a>
           
             <a href="/tags/Luogu/" rel="tag"> <i class="fa fa-tag"></i> Luogu</a>
+          
+            <a href="/tags/暴力/" rel="tag"> <i class="fa fa-tag"></i> 暴力</a>
+          
+            <a href="/tags/二维前缀和/" rel="tag"> <i class="fa fa-tag"></i> 二维前缀和</a>
           
         </div>
       
