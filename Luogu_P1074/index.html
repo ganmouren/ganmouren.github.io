@@ -96,24 +96,28 @@
 
 
 
-  <meta name="description" content="Bookmark for NexT  Introduce  Bookmark is a plugin that allow the users save their reading position. The users could just click the bookmark icon (like 🔖) in left-top of the page to save the position">
-<meta property="og:type" content="website">
-<meta property="og:title" content="甘某人的博客">
-<meta property="og:url" content="http://yoursite.com/lib/bookmark/README.html">
+  <meta name="description" content="题目描述小城和小华都是热爱数学的好学生，最近，他们不约而同地迷上了数独游戏，好胜的他们想用数独来一比高低。但普通的数独对他们来说都过于简单了，于是他们向 $Z$ 博士请教，$Z$ 博士拿出了他最近发明的“靶形数独”，作为这两个孩子比试的题目。 靶形数独的方格同普通数独一样，在 $9$ 格宽 $\times 9$ 格高的大九宫格中有 $9$ 个 $3$ 格宽 $\times 3$ 格高的小九宫格 $">
+<meta name="keywords" content="题解,Luogu,dfs,剪枝">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Luogu P1074 靶形数独">
+<meta property="og:url" content="http://yoursite.com/Luogu_P1074/index.html">
 <meta property="og:site_name" content="甘某人的博客">
-<meta property="og:description" content="Bookmark for NexT  Introduce  Bookmark is a plugin that allow the users save their reading position. The users could just click the bookmark icon (like 🔖) in left-top of the page to save the position">
+<meta property="og:description" content="题目描述小城和小华都是热爱数学的好学生，最近，他们不约而同地迷上了数独游戏，好胜的他们想用数独来一比高低。但普通的数独对他们来说都过于简单了，于是他们向 $Z$ 博士请教，$Z$ 博士拿出了他最近发明的“靶形数独”，作为这两个孩子比试的题目。 靶形数独的方格同普通数独一样，在 $9$ 格宽 $\times 9$ 格高的大九宫格中有 $9$ 个 $3$ 格宽 $\times 3$ 格高的小九宫格 $">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-26T08:30:42.756Z">
+<meta property="og:image" content="http://yoursite.com/Luogu_P1074/说明.png">
+<meta property="og:image" content="http://yoursite.com/Luogu_P1074/示例.png">
+<meta property="og:updated_time" content="2019-02-04T07:55:46.838Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="甘某人的博客">
-<meta name="twitter:description" content="Bookmark for NexT  Introduce  Bookmark is a plugin that allow the users save their reading position. The users could just click the bookmark icon (like 🔖) in left-top of the page to save the position">
+<meta name="twitter:title" content="Luogu P1074 靶形数独">
+<meta name="twitter:description" content="题目描述小城和小华都是热爱数学的好学生，最近，他们不约而同地迷上了数独游戏，好胜的他们想用数独来一比高低。但普通的数独对他们来说都过于简单了，于是他们向 $Z$ 博士请教，$Z$ 博士拿出了他最近发明的“靶形数独”，作为这两个孩子比试的题目。 靶形数独的方格同普通数独一样，在 $9$ 格宽 $\times 9$ 格高的大九宫格中有 $9$ 个 $3$ 格宽 $\times 3$ 格高的小九宫格 $">
+<meta name="twitter:image" content="http://yoursite.com/Luogu_P1074/说明.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/lib/bookmark/README.html">
+  <link rel="canonical" href="http://yoursite.com/Luogu_P1074/">
 
 
 
@@ -123,7 +127,7 @@
   };
 </script>
 
-  <title> | 甘某人的博客</title>
+  <title>Luogu P1074 靶形数独 | 甘某人的博客</title>
   
 
 
@@ -348,167 +352,211 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Luogu_P1074/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="甘某人">
+      <meta itemprop="description" content="菜鸟每天飞过$QAQ$">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="甘某人的博客">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">
-
-</h1>
-
-<div class="post-meta">
-  
-  
-
-
-  
-  
-  <ul class="breadcrumb">
-    
-      
-      
         
+        
+          <h1 class="post-title" itemprop="name headline">Luogu P1074 靶形数独
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-02-04 15:39:34 / 修改时间：15:55:46" itemprop="dateCreated datePublished" datetime="2019-02-04T15:39:34+08:00">2019-02-04</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
           
             
-          
-          <li><a href="/lib/">LIB</a></li>
-        
-      
-    
-      
-      
-        
-          <li>BOOKMARK</li>
-        
-      
-    
-      
-      
-        
-          
             
           
-          <li><a href="/lib/README.html/">README.HTML</a></li>
-        
-      
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
     
-  </ul>
 
-
-</div>
-
-</header>
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
       
+
       
-      <div class="post-body">
-        
-        
-          <h1 align="center">Bookmark for <a href="https://github.com/theme-next" target="_blank" rel="noopener">NexT</a></h1>
+        <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>小城和小华都是热爱数学的好学生，最近，他们不约而同地迷上了数独游戏，好胜的他们想用数独来一比高低。但普通的数独对他们来说都过于简单了，于是他们向 $Z$ 博士请教，$Z$ 博士拿出了他最近发明的“靶形数独”，作为这两个孩子比试的题目。</p>
+<p>靶形数独的方格同普通数独一样，在 $9$ 格宽 $\times 9$ 格高的大九宫格中有 $9$ 个 $3$ 格宽 $\times 3$ 格高的小九宫格 $($ 用粗黑色线隔开的 $)$。在这个大九宫格中，有一些数字是已知的，根据这些数字，利用逻辑推理，在其他的空格上填入 $1$ 到 $9$ 的数字。每个数字在每个小九宫格内不能重复出现，每个数字在每行、每列也不能重复出现。但靶形数独有一点和普通数独不同，即每一个方格都有一个分值，而且如同一个靶子一样，离中心越近则分值越高。$($ 如图 $)$</p>
+<img src="/Luogu_P1074/说明.png">
+<p>上图具体的分值分布是：最里面一格 $($ 黄色区域 $)$ 为 $10$ 分，黄色区域外面的一圈 $($ 红色区域 $)$ 每个格子为 $9 $分，再外面一圈 $($ 蓝色区域 $)$ 每个格子为 $8$ 分，蓝色区域外面一圈 $($ 棕色区域 $)$ 每个格子为 $7$ 分，最外面一圈 $($ 白色区域 $)$ 每个格子为 $6$ 分，如上图所示。比赛的要求是：每个人必须完成一个给定的数独 $($ 每个给定数独可能有不同的填法 $)$，而且要争取更高的总分数。而这个总分数即每个方格上的分值和完成这个数独时填在相应格上的数字的乘积的总和</p>
+<p>总分数即每个方格上的分值和完成这个数独时填在相应格上的数字的乘积的总和。如图，在以下的这个已经填完数字的靶形数独游戏中，总分数为 $2829$ 。游戏规定，将以总分数的高低决出胜负。</p>
+<img src="/Luogu_P1074/示例.png">
+<a id="more"></a>
+<h2 id="输入输出格式"><a href="#输入输出格式" class="headerlink" title="输入输出格式"></a>输入输出格式</h2><p><strong>输入格式：</strong></p>
+<p>一共 $9$ 行。每行 $9$ 个整数 $($ 每个数都在 $0-9$ 的范围内 $)$ ，表示一个尚未填满的数独方格，未填的空格用“ $0$ ”表示。每两个数字之间用一个空格隔开。</p>
+<p><strong>输出格式：</strong></p>
+<p>输出共 $1$ 行。输出可以得到的靶形数独的最高分数。如果这个数独无解，则输出整数 $−1$ 。</p>
+<h2 id="输入输出样例"><a href="#输入输出样例" class="headerlink" title="输入输出样例"></a>输入输出样例</h2><p><strong>输入样例#1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">7 0 0 9 0 0 0 0 1 </span><br><span class="line">1 0 0 0 0 5 9 0 0 </span><br><span class="line">0 0 0 2 0 0 0 8 0 </span><br><span class="line">0 0 5 0 2 0 0 0 3 </span><br><span class="line">0 0 0 0 0 0 6 4 8 </span><br><span class="line">4 1 3 0 0 0 0 0 0 </span><br><span class="line">0 0 7 0 0 2 0 9 0 </span><br><span class="line">2 0 1 0 6 0 8 0 4 </span><br><span class="line">0 8 0 5 0 4 0 1 2</span><br></pre></td></tr></table></figure>
+<p><strong>输出样例#1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2829</span><br></pre></td></tr></table></figure>
+<p><strong>输入样例#2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">0 0 0 7 0 2 4 5 3 </span><br><span class="line">9 0 0 0 0 8 0 0 0 </span><br><span class="line">7 4 0 0 0 5 0 1 0 </span><br><span class="line">1 9 5 0 8 0 0 0 0 </span><br><span class="line">0 7 0 0 0 0 0 2 5 </span><br><span class="line">0 3 0 5 7 9 1 0 8 </span><br><span class="line">0 0 0 6 0 1 0 0 0 </span><br><span class="line">0 6 0 9 0 0 0 0 1 </span><br><span class="line">0 0 0 0 0 0 0 0 6</span><br></pre></td></tr></table></figure>
+<p><strong>输出样例#2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2852</span><br></pre></td></tr></table></figure>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>【数据范围】</p>
+<p>$40\%$ 的数据，数独中非 %0% 数的个数不少于 %30% 。</p>
+<p>$80\%$ 的数据，数独中非 %0% 数的个数不少于 %26% 。</p>
+<p>$100\%$ 的数据，数独中非 %0% 数的个数不少于 %24% 。</p>
+<p>$NOIP\;2009$ 提高组 第四题</p>
+<hr>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>第一眼就可以看出这是个暴力 $dfs$ 的题目。</p>
+<p>但是写起来还是很烦的…第一次写完调好兴奋地交上去 $T$ 了五个点，所以需要一些剪枝。</p>
+<p>这个剪枝还是蛮好想的，我们把每一行按照 $0$ 的个数排序，从少到多填，明显会快很多。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> score[<span class="number">11</span>][<span class="number">11</span>]=</span><br><span class="line">&#123;</span><br><span class="line">    &#123;<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>&#125;,</span><br><span class="line">    &#123;<span class="number">0</span>, <span class="number">6</span>, <span class="number">6</span>, <span class="number">6</span>, <span class="number">6</span>, <span class="number">6</span>, <span class="number">6</span>, <span class="number">6</span>, <span class="number">6</span>, <span class="number">6</span>, <span class="number">0</span>&#125;,</span><br><span class="line">    &#123;<span class="number">0</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">7</span>, <span class="number">7</span>, <span class="number">7</span>, <span class="number">7</span>, <span class="number">7</span>, <span class="number">7</span>, <span class="number">6</span>, <span class="number">0</span>&#125;,</span><br><span class="line">    &#123;<span class="number">0</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">8</span>, <span class="number">8</span>, <span class="number">8</span>, <span class="number">8</span>, <span class="number">7</span>, <span class="number">6</span>, <span class="number">0</span>&#125;,</span><br><span class="line">    &#123;<span class="number">0</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">9</span>, <span class="number">9</span>, <span class="number">8</span>, <span class="number">7</span>, <span class="number">6</span>, <span class="number">0</span>&#125;,</span><br><span class="line">    &#123;<span class="number">0</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>, <span class="number">9</span>, <span class="number">8</span>, <span class="number">7</span>, <span class="number">6</span>, <span class="number">0</span>&#125;,</span><br><span class="line">    &#123;<span class="number">0</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">9</span>, <span class="number">9</span>, <span class="number">8</span>, <span class="number">7</span>, <span class="number">6</span>, <span class="number">0</span>&#125;,</span><br><span class="line">    &#123;<span class="number">0</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">8</span>, <span class="number">8</span>, <span class="number">8</span>, <span class="number">8</span>, <span class="number">7</span>, <span class="number">6</span>, <span class="number">0</span>&#125;,</span><br><span class="line">    &#123;<span class="number">0</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">7</span>, <span class="number">7</span>, <span class="number">7</span>, <span class="number">7</span>, <span class="number">7</span>, <span class="number">7</span>, <span class="number">6</span>, <span class="number">0</span>&#125;,</span><br><span class="line">    &#123;<span class="number">0</span>, <span class="number">6</span>, <span class="number">6</span>, <span class="number">6</span>, <span class="number">6</span>, <span class="number">6</span>, <span class="number">6</span>, <span class="number">6</span>, <span class="number">6</span>, <span class="number">6</span>, <span class="number">0</span>&#125;,</span><br><span class="line">    &#123;<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>&#125;,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">h</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> data, i;</span><br><span class="line">    <span class="keyword">bool</span> <span class="keyword">operator</span> &lt; (<span class="keyword">const</span> h &amp;a) <span class="keyword">const</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(data != a.data)</span><br><span class="line">            <span class="keyword">return</span> data &lt; a.data;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">return</span> i &lt; a.i;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;tot0[<span class="number">11</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> Map[<span class="number">11</span>][<span class="number">11</span>], ans = <span class="number">-1</span>, next[<span class="number">11</span>];</span><br><span class="line"><span class="keyword">bool</span> x[<span class="number">11</span>][<span class="number">11</span>], y[<span class="number">11</span>][<span class="number">11</span>], z[<span class="number">11</span>][<span class="number">11</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">belong</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (a - <span class="number">1</span>) / <span class="number">3</span> * <span class="number">3</span> + (b - <span class="number">1</span>) / <span class="number">3</span> + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b, <span class="keyword">int</span> s)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(a == <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        ans = max(ans, s);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(Map[a][b])</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(b == <span class="number">9</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            dfs(next[a], <span class="number">1</span>, s);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            dfs(a, b + <span class="number">1</span>, s);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">9</span>; i ++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(!x[a][i] &amp;&amp; !y[b][i] &amp;&amp; !z[ belong(a, b) ][i])</span><br><span class="line">        &#123;</span><br><span class="line">            Map[a][b] = i;</span><br><span class="line">            x[a][i] = y[b][i] = z[ belong(a, b) ][i] = <span class="literal">true</span>;</span><br><span class="line">            <span class="keyword">if</span>(b == <span class="number">9</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                dfs(next[a], <span class="number">1</span>, s + score[a][b] * i);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                dfs(a, b + <span class="number">1</span>, s + score[a][b] * i);</span><br><span class="line">            &#125;</span><br><span class="line">            Map[a][b] = <span class="number">0</span>;</span><br><span class="line">            x[a][i] = y[b][i] = z[ belong(a, b) ][i] = <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="keyword">inline</span> <span class="title">read</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x = <span class="number">0</span>, flag = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">char</span> ch = getchar();</span><br><span class="line">    <span class="keyword">while</span>(ch &lt; <span class="string">'0'</span> || ch &gt; <span class="string">'9'</span>)&#123;<span class="keyword">if</span>(ch == <span class="string">'-'</span>)flag = <span class="number">-1</span>; ch = getchar();&#125;</span><br><span class="line">    <span class="keyword">while</span>(ch &gt;= <span class="string">'0'</span> &amp;&amp; ch &lt;= <span class="string">'9'</span>)&#123;x = x * <span class="number">10</span> + ch - <span class="string">'0'</span>; ch = getchar();&#125;</span><br><span class="line">    <span class="keyword">return</span> x * flag;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> tmp = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">9</span>; i ++)</span><br><span class="line">    &#123;</span><br><span class="line">        tot0[i].i = i;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= <span class="number">9</span>; j ++)</span><br><span class="line">        &#123;</span><br><span class="line">            Map[i][j] = read();</span><br><span class="line">            <span class="keyword">if</span>(Map[i][j] == <span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                tot0[i].data ++;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            x[i][ Map[i][j] ] = <span class="literal">true</span>;</span><br><span class="line">            y[j][ Map[i][j] ] = <span class="literal">true</span>;</span><br><span class="line">            z[ belong(i, j) ][ Map[i][j] ] = <span class="literal">true</span>;</span><br><span class="line">            tmp += Map[i][j] * score[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    sort(tot0 + <span class="number">1</span>, tot0 + <span class="number">9</span> + <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">9</span>; i ++)</span><br><span class="line">        next[tot0[i].i] = tot0[i + <span class="number">1</span>].i;</span><br><span class="line">    dfs(tot0[<span class="number">1</span>].i, <span class="number">1</span>, tmp);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d"</span>, ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><del>至于为什么码风跟我现在不太一样是因为这是以前写的现在来水篇博客</del></p>
 
-<h2 align="center">Introduce</h2>
-
-<p>Bookmark is a plugin that allow the users save their reading position.</p>
-<p>The users could just click the bookmark icon (like 🔖) in left-top of the page to save the position.</p>
-<p>And when they visit your blog in the next time, they can continue the last reading position by clicking the bookmark icon from the home page.</p>
-<h1 align="center">Installation</h1>
-
-<h2>If you want to use the CDN instead of clone this repo, please jump to the Step 3.</h2>
-
-<h2 align="center">Step 1 &rarr; Go to NexT dir</h2>
-
-<p>Change dir to <strong>NexT</strong> directory. There must be <code>layout</code>, <code>source</code>, <code>languages</code> and other directories:</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> themes/next</span><br><span class="line">$ ls</span><br><span class="line">bower.json  _config.yml  docs  gulpfile.coffee  languages  layout  LICENSE.md  package.json  README.md  scripts  <span class="built_in">source</span>  <span class="built_in">test</span></span><br></pre></td></tr></table></figure>
-<h2 align="center">Step 2 &rarr; Get module</h2>
-
-<p>Install module to <code>source/lib</code> directory:</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/theme-next/theme-next-bookmark.git <span class="built_in">source</span>/lib/bookmark</span><br></pre></td></tr></table></figure>
-<h2 align="center">Step 3 &rarr; Set it up</h2>
-
-<p>Enable module in <strong>NexT</strong> <code>_config.yml</code> file:</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">bookmark:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p><strong>And, if you wants to use the CDN, then need to set:</strong></p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">vendors:</span></span><br><span class="line">  <span class="string">...</span></span><br><span class="line"><span class="attr">  bookmark:</span> <span class="attr">https://cdn.jsdelivr.net/gh/theme-next/theme-next-bookmark@latest/bookmark.min.js</span></span><br></pre></td></tr></table></figure>
-<h1 align="center">Update</h1>
-
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> themes/next/<span class="built_in">source</span>/lib/bookmark</span><br><span class="line">$ git pull</span><br></pre></td></tr></table></figure>
-
-        
-      </div>
-      
-      
       
     </div>
+
     
 
+    
+    
+    
 
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/题解/" rel="tag"> <i class="fa fa-tag"></i> 题解</a>
+          
+            <a href="/tags/Luogu/" rel="tag"> <i class="fa fa-tag"></i> Luogu</a>
+          
+            <a href="/tags/dfs/" rel="tag"> <i class="fa fa-tag"></i> dfs</a>
+          
+            <a href="/tags/剪枝/" rel="tag"> <i class="fa fa-tag"></i> 剪枝</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Sister_training_diary/" rel="next" title="妹调玩后感">
+                <i class="fa fa-chevron-left"></i> 妹调玩后感
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
   
   
-  <ul class="breadcrumb">
-    
-      
-      
-        
-          
-            
-          
-          <li><a href="/lib/">LIB</a></li>
-        
-      
-    
-      
-      
-        
-          <li>BOOKMARK</li>
-        
-      
-    
-      
-      
-        
-          
-            
-          
-          <li><a href="/lib/README.html/">README.HTML</a></li>
-        
-      
-    
-  </ul>
+  
+  </article>
 
 
-    
-    
-    
   </div>
 
 
@@ -674,7 +722,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">Bookmark for NexT</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.1.</span> <span class="nav-text">Introduce</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">Installation</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.1.</span> <span class="nav-text">If you want to use the CDN instead of clone this repo, please jump to the Step 3.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.2.</span> <span class="nav-text">Step 1 → Go to NexT dir</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.3.</span> <span class="nav-text">Step 2 → Get module</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.4.</span> <span class="nav-text">Step 3 → Set it up</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">Update</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输入输出格式"><span class="nav-number">2.</span> <span class="nav-text">输入输出格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输入输出样例"><span class="nav-number">3.</span> <span class="nav-text">输入输出样例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#说明"><span class="nav-number">4.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题解"><span class="nav-number">5.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">6.</span> <span class="nav-text">代码</span></a></li></ol></div>
             
 
           </div>
@@ -1300,7 +1348,7 @@
   <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
   <script>
   
-    bookmark.loadBookmark();
+    bookmark.scrollToMark('auto', "#更多");
   
   </script>
 
