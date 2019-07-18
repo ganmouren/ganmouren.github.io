@@ -1,0 +1,55 @@
+﻿{
+	"version":"Sample 1.0.0",
+	"model":"moc/ylia.moc",
+	"textures":[
+		"moc/ylia.2048/texture_00.png"
+	],
+	"hit_areas":
+	[
+		{"name":"breast", "id":"D_REF.PT_BREAST"},
+		{"name":"face", "id":"D_REF.PT_FACE"},
+		{"name":"body", "id":"D_REF.PT_BODY"},
+		{"name":"head", "id":"D_REF.PT_HEAD"},
+	],
+	"motions":{
+		"tap_idle":[
+			{"file":"motions/ylia_03.mtn","sound":"sounds/ylia_03.mp3","fade_in":0,"fade_out":0,"text":"哈~"},
+			{"file":"motions/ylia_06.mtn","sound":"sounds/ylia_06.mp3","fade_in":0,"fade_out":0,"text":"马~鹿~"},
+			{"file":"motions/ylia_07.mtn","sound":"sounds/ylia_07.mp3","fade_in":0,"fade_out":0,"text":"恩……那个……"},
+			{"file":"motions/ylia_08.mtn","sound":"sounds/ylia_08.mp3","fade_in":0,"fade_out":0,"text":"好无聊的说~"},
+		],
+		"tap_breast":
+		[
+			{"file":"motions/ylia_04.mtn","sound":"sounds/ylia_04.mp3","fade_in":0,"fade_out":0,"text":"请住手~"},
+			{"file":"motions/ylia_05.mtn","sound":"sounds/ylia_05.mp3","fade_in":0,"fade_out":0,"text":"不要~"},
+		],
+		"tap_face":
+		[
+			{"file":"motions/ylia_12.mtn","sound":"sounds/ylia_12.mp3","fade_in":0,"fade_out":0,"text":"好害羞呀……"},
+		],
+		"tap_body":
+		[
+			{"file":"motions/ylia_13.mtn","sound":"sounds/ylia_13.mp3","fade_in":0,"fade_out":0,"text":"人家要生气咯！"},
+			{"file":"motions/ylia_14.mtn","sound":"sounds/ylia_14.mp3","fade_in":0,"fade_out":0,"text":"master~H~"},
+		],
+		"tap_head":
+		[
+			{"file":"motions/ylia_09.mtn","sound":"sounds/ylia_09.mp3","fade_in":0,"fade_out":0,"text":"再来一次~"},
+			{"file":"motions/ylia_10.mtn","sound":"sounds/ylia_10.mp3","fade_in":0,"fade_out":0,"text":"好舒服"},
+		],
+		"tap_hello":
+		[
+			{"file":"motions/ylia_01.mtn","sound":"sounds/ylia_01.mp3","fade_in":0,"fade_out":0,"text":"你好~欧尼酱~"},
+			{"file":"motions/ylia_02.mtn","sound":"sounds/ylia_02.mp3","fade_in":0,"fade_out":0,"text":"你好~master~"},
+		],
+		"tap_dance":
+		[
+			{"file":"motions/ylia_15.mtn","sound":"sounds/ylia_15.mp3","fade_in":0,"fade_out":0,"text":"哼哼~哼哼~哼哼哼哼~"},
+		],
+		"tap_change":
+		[
+			{"file":"motions/ylia_11.mtn","sound":"sounds/ylia_11.mp3","fade_in":0,"fade_out":0,"text":""},
+		],
+	},
+	"physics":"json/physics.json"
+}
