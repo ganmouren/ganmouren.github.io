@@ -96,25 +96,25 @@
 
 
 
-  <meta name="description" content="好久没有更新了，来写 $(shui)$ 一篇 $LCA$ 的博客。 以前觉得 $LCA$ $($最近公共祖先$)$是神仙学的东西， $fj$ 讲的时候我也贼吉尔懵逼，现在看来也没有那么难。 当我们想求 $LCA(x,y)$ 时，如果一格一格跳直到跳到同一位置，不知道会跳到哪一年去，于是我们用到了一个神奇的东西：倍增。 众所周知任何数都可以用二进制，所以我们可以每次跳 $2^i$ 步，大大加快效率。">
-<meta name="keywords" content="OI,LCA,倍增">
+  <meta name="description" content="探究精神。">
+<meta name="keywords" content="写作,二次元,Arknights,R18">
 <meta property="og:type" content="article">
-<meta property="og:title" content="倍增求 $LCA$">
-<meta property="og:url" content="http://yoursite.com/LCA/index.html">
+<meta property="og:title" content="箭毒蛙的繁殖记录">
+<meta property="og:url" content="http://yoursite.com/Mating_records_of_blue_poison/index.html">
 <meta property="og:site_name" content="甘某人の博客">
-<meta property="og:description" content="好久没有更新了，来写 $(shui)$ 一篇 $LCA$ 的博客。 以前觉得 $LCA$ $($最近公共祖先$)$是神仙学的东西， $fj$ 讲的时候我也贼吉尔懵逼，现在看来也没有那么难。 当我们想求 $LCA(x,y)$ 时，如果一格一格跳直到跳到同一位置，不知道会跳到哪一年去，于是我们用到了一个神奇的东西：倍增。 众所周知任何数都可以用二进制，所以我们可以每次跳 $2^i$ 步，大大加快效率。">
+<meta property="og:description" content="探究精神。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-23T13:17:14.645Z">
+<meta property="og:updated_time" content="2020-01-09T09:43:08.598Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="倍增求 $LCA$">
-<meta name="twitter:description" content="好久没有更新了，来写 $(shui)$ 一篇 $LCA$ 的博客。 以前觉得 $LCA$ $($最近公共祖先$)$是神仙学的东西， $fj$ 讲的时候我也贼吉尔懵逼，现在看来也没有那么难。 当我们想求 $LCA(x,y)$ 时，如果一格一格跳直到跳到同一位置，不知道会跳到哪一年去，于是我们用到了一个神奇的东西：倍增。 众所周知任何数都可以用二进制，所以我们可以每次跳 $2^i$ 步，大大加快效率。">
+<meta name="twitter:title" content="箭毒蛙的繁殖记录">
+<meta name="twitter:description" content="探究精神。">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/LCA/">
+  <link rel="canonical" href="http://yoursite.com/Mating_records_of_blue_poison/">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>倍增求 $LCA$ | 甘某人の博客</title>
+  <title>箭毒蛙的繁殖记录 | 甘某人の博客</title>
   
 
 
@@ -369,7 +369,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/LCA/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Mating_records_of_blue_poison/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="甘某人">
@@ -386,7 +386,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">倍增求 $LCA$
+          <h1 class="post-title" itemprop="name headline">箭毒蛙的繁殖记录
 
               
             
@@ -412,24 +412,12 @@
                 
               
 
-              <time title="创建时间：2018-11-24 00:04:32" itemprop="dateCreated datePublished" datetime="2018-11-24T00:04:32+08:00">2018-11-24</time>
+              <time title="创建时间：2020-01-09 17:08:22 / 修改时间：17:43:08" itemprop="dateCreated datePublished" datetime="2020-01-09T17:08:22+08:00">2020-01-09</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-08-23 21:17:14" itemprop="dateModified" datetime="2019-08-23T21:17:14+08:00">2019-08-23</time>
               
             
           </span>
@@ -470,12 +458,20 @@
       
 
       
-        <p>好久没有更新了，来写 $(shui)$ 一篇 $LCA$ 的博客。</p>
-<p>以前觉得 $LCA$ $($最近公共祖先$)$是神仙学的东西， $fj$ 讲的时候我也贼吉尔懵逼，现在看来也没有那么难。</p>
-<p>当我们想求 $LCA(x,y)$ 时，如果一格一格跳直到跳到同一位置，不知道会跳到哪一年去，于是我们用到了一个神奇的东西：倍增。</p>
-<p>众所周知任何数都可以用二进制，所以我们可以每次跳 $2^i$ 步，大大加快效率。这里我们用 $fa[i][j]$ 代表第 $i$ 号节点往上跳 $2^j$ 步到达的位置。所以很容易推出来: $fa[i][j]=fa[fa[i][j-1]][j-1]$ 。</p>
-<p>然后跳的具体过程看代码。<br><a id="more"></a></p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> For(a,x,y) for(int a=x;a&lt;=y;a++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Bac(a,x,y) for(int a=x;a&gt;=y;a--)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">5e5</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> M=<span class="number">5e5</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n,m,s;</span><br><span class="line"><span class="keyword">int</span> depth[N+<span class="number">5</span>],fa[N+<span class="number">5</span>][<span class="number">25</span>];</span><br><span class="line"><span class="keyword">int</span> lg[N+<span class="number">5</span>];</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Edge</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> to,next;</span><br><span class="line">&#125;edge[<span class="number">2</span>*M+<span class="number">5</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> num_edge,head[N+<span class="number">5</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add_edge</span><span class="params">(<span class="keyword">int</span> from,<span class="keyword">int</span> to)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	edge[++num_edge].next=head[from];</span><br><span class="line">	edge[num_edge].to=to;</span><br><span class="line">	head[from]=num_edge;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">lca</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(depth[y]&lt;depth[x])</span><br><span class="line">		swap(x,y);</span><br><span class="line">	<span class="keyword">while</span>(depth[x]&lt;depth[y])</span><br><span class="line">		y=fa[y][lg[depth[y]-depth[x]]];<span class="comment">//先跳到同一深度</span></span><br><span class="line">	<span class="keyword">if</span>(x==y)<span class="keyword">return</span> x;</span><br><span class="line">	Bac(i,lg[depth[x]],<span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(fa[x][i]!=fa[y][i])<span class="comment">//因为我们要跳到它们LCA的下面一层，所以它们肯定不相等，如果相等就代表跳多了</span></span><br><span class="line">			x=fa[x][i],y=fa[y][i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> fa[x][<span class="number">0</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> fat)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	depth[x]=depth[fat]+<span class="number">1</span>;</span><br><span class="line">	fa[x][<span class="number">0</span>]=fat;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;(<span class="number">1</span>&lt;&lt;i)&lt;=depth[x];i++)</span><br><span class="line">		fa[x][i]=fa[fa[x][i<span class="number">-1</span>]][i<span class="number">-1</span>];</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> p=head[x];p;p=edge[p].next)</span><br><span class="line">		<span class="keyword">if</span>(edge[p].to!=fat)dfs(edge[p].to,x);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;n,&amp;m,&amp;s);</span><br><span class="line">	<span class="keyword">int</span> u,v;</span><br><span class="line">	For(i,<span class="number">1</span>,n<span class="number">-1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;u,&amp;v);</span><br><span class="line">		add_edge(u,v);</span><br><span class="line">		add_edge(v,u);</span><br><span class="line">	&#125;</span><br><span class="line">	lg[<span class="number">0</span>]=<span class="number">-1</span>;</span><br><span class="line">	For(i,<span class="number">1</span>,n)</span><br><span class="line">		lg[i]=lg[i/<span class="number">2</span>]+<span class="number">1</span>;<span class="comment">//优化，预处理log</span></span><br><span class="line">	dfs(s,<span class="number">0</span>);</span><br><span class="line">	<span class="keyword">int</span> a,b;</span><br><span class="line">	For(i,<span class="number">1</span>,m)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;a,&amp;b);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,lca(a,b));</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+<div id="hbe-security">
+  <div class="hbe-input-container">
+  <input type="password" class="hbe-form-control" id="pass" placeholder="我的蓝毒精二几级了？">
+    <label for="pass">我的蓝毒精二几级了？</label>
+    <div class="bottom-line"></div>
+  </div>
+</div>
+<div id="decryptionError" style="display: none;">Incorrect Password!</div>
+<div id="noContentError" style="display: none;">No content to display!</div>
+<div id="encrypt-blog" style="display:none">
+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
+</div>
+<script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
       
     </div>
 
@@ -498,11 +494,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/OI/" rel="tag"> <i class="fa fa-tag"></i> OI</a>
+            <a href="/tags/写作/" rel="tag"> <i class="fa fa-tag"></i> 写作</a>
           
-            <a href="/tags/LCA/" rel="tag"> <i class="fa fa-tag"></i> LCA</a>
+            <a href="/tags/二次元/" rel="tag"> <i class="fa fa-tag"></i> 二次元</a>
           
-            <a href="/tags/倍增/" rel="tag"> <i class="fa fa-tag"></i> 倍增</a>
+            <a href="/tags/Arknights/" rel="tag"> <i class="fa fa-tag"></i> Arknights</a>
+          
+            <a href="/tags/R18/" rel="tag"> <i class="fa fa-tag"></i> R18</a>
           
         </div>
       
@@ -515,8 +513,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Luogu_P3787/" rel="next" title="Luogu P3787 冰精冻西瓜">
-                <i class="fa fa-chevron-left"></i> Luogu P3787 冰精冻西瓜
+              <a href="/Broken_platinum_love/" rel="next" title="破碎的白金色爱恋">
+                <i class="fa fa-chevron-left"></i> 破碎的白金色爱恋
               </a>
             
           </div>
@@ -524,10 +522,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/Number_theory/" rel="prev" title="数论学习">
-                数论学习 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -576,17 +570,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -719,23 +704,6 @@
         </div>
       </div>
 
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">1.</span> <span class="nav-text">代码</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
       
 	  
 	  <p><br></p>
