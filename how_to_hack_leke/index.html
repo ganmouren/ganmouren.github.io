@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="起因起因是这样的： 有一天我们文综老师 $\text{ly}$ 下课布置作业的时候突然被踢下去了 于是我们一堆人开始研究如何登别人的号 结果秘密就藏在网址里… 研究我们先来看一段上课的网址（随便搞了一节课）  https://lesson.leke.cn/auth/common/lesson/play.htm?udata=eyJjb3Vyc2VTaW5nbGVJZCI6IjEwMTc1OTA5Ii">
+  <meta name="description" content="此文章已被加密，请输入密码。">
 <meta name="keywords" content="生活">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于乐课网">
 <meta property="og:url" content="http://yoursite.com/how_to_hack_leke/index.html">
 <meta property="og:site_name" content="甘某人の博客">
-<meta property="og:description" content="起因起因是这样的： 有一天我们文综老师 $\text{ly}$ 下课布置作业的时候突然被踢下去了 于是我们一堆人开始研究如何登别人的号 结果秘密就藏在网址里… 研究我们先来看一段上课的网址（随便搞了一节课）  https://lesson.leke.cn/auth/common/lesson/play.htm?udata=eyJjb3Vyc2VTaW5nbGVJZCI6IjEwMTc1OTA5Ii">
+<meta property="og:description" content="此文章已被加密，请输入密码。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-03-24T13:12:43.623Z">
+<meta property="og:updated_time" content="2020-03-24T13:14:10.641Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于乐课网">
-<meta name="twitter:description" content="起因起因是这样的： 有一天我们文综老师 $\text{ly}$ 下课布置作业的时候突然被踢下去了 于是我们一堆人开始研究如何登别人的号 结果秘密就藏在网址里… 研究我们先来看一段上课的网址（随便搞了一节课）  https://lesson.leke.cn/auth/common/lesson/play.htm?udata=eyJjb3Vyc2VTaW5nbGVJZCI6IjEwMTc1OTA5Ii">
+<meta name="twitter:description" content="此文章已被加密，请输入密码。">
 
 
 
@@ -416,7 +416,7 @@
                 
               
 
-              <time title="创建时间：2020-03-24 20:45:39 / 修改时间：21:12:43" itemprop="dateCreated datePublished" datetime="2020-03-24T20:45:39+08:00">2020-03-24</time>
+              <time title="创建时间：2020-03-24 20:45:39 / 修改时间：21:14:10" itemprop="dateCreated datePublished" datetime="2020-03-24T20:45:39+08:00">2020-03-24</time>
             
 
             
@@ -462,36 +462,20 @@
       
 
       
-        <h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>起因是这样的：</p>
-<p>有一天我们文综老师 $\text{ly}$ 下课布置作业的时候突然被踢下去了</p>
-<p>于是我们一堆人开始研究如何登别人的号</p>
-<p>结果秘密就藏在网址里…</p>
-<h1 id="研究"><a href="#研究" class="headerlink" title="研究"></a>研究</h1><p>我们先来看一段上课的网址（随便搞了一节课）</p>
-<blockquote>
-<p><a href="https://lesson.leke.cn/auth/common/lesson/play.htm?udata=eyJjb3Vyc2VTaW5nbGVJZCI6IjEwMTc1OTA5Iiwicm9sZUlkIjoiMTAwIiwidXNlcklkIjoiMTY4NTgzNCIsInRpY2tldCI6IlZGZHdibEJSUFQwN1MwTlJhMHhUWjNaS1EydHJTMmt3UFRzeU9ESTQiLCJjb3Vyc2VUeXBlIjoxfQ==" target="_blank" rel="noopener">https://lesson.leke.cn/auth/common/lesson/play.htm?udata=eyJjb3Vyc2VTaW5nbGVJZCI6IjEwMTc1OTA5Iiwicm9sZUlkIjoiMTAwIiwidXNlcklkIjoiMTY4NTgzNCIsInRpY2tldCI6IlZGZHdibEJSUFQwN1MwTlJhMHhUWjNaS1EydHJTMmt3UFRzeU9ESTQiLCJjb3Vyc2VUeXBlIjoxfQ==</a></p>
-</blockquote>
-<p>注意到后面的 $\text{udata}$</p>
-<blockquote>
-<p>eyJjb3Vyc2VTaW5nbGVJZCI6IjEwMTc1OTA5Iiwicm9sZUlkIjoiMTAwIiwidXNlcklkIjoiMTY4NTgzNCIsInRpY2tldCI6IlZGZHdibEJSUFQwN1MwTlJhMHhUWjNaS1EydHJTMmt3UFRzeU9ESTQiLCJjb3Vyc2VUeXBlIjoxfQ==</p>
-</blockquote>
-<p>这玩意儿像啥？$\text{base64}$ …</p>
-<p>解密出来是这样的</p>
-<blockquote>
-<p>{“courseSingleId”:”10175909”,”roleId”:”100”,”userId”:”1685834”,”ticket”:”VFdwblBRPT07S0NRa0xTZ3ZKQ2trS2kwPTsyODI4”,”courseType”:1}</p>
-</blockquote>
-<p>太明显了…</p>
-<blockquote>
-<ul>
-<li>$\text{courseSingleId}$ 应该是这节课的 $\text{Id}$</li>
-<li>$\text{roleID}$ 不知道什么玩意儿， $100$ 是学生 $101$ 是老师</li>
-<li>$\text{userID}$ 就是用户 $\text{ID}$</li>
-<li>$\text{ticket}$ 并没发现有什么锤子用…</li>
-<li>$\text{courseType}$ $\text{0}$ 是游客（据说）$\text{1}$ 是学生 $\text{2}$ 是老师</li>
-</ul>
-</blockquote>
-<p>然后我们调整一遍这个玩意儿，加密回去输到网址里就完事儿了</p>
-<p>关于 $\text{userID}$ 可以在那个人的个人界面检查元素 $\text{+ ctrl F}$ 搜索获得…</p>
-
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+<div id="hbe-security">
+  <div class="hbe-input-container">
+  <input type="password" class="hbe-form-control" id="pass" placeholder="此文章已被加密，请输入密码。">
+    <label for="pass">此文章已被加密，请输入密码。</label>
+    <div class="bottom-line"></div>
+  </div>
+</div>
+<div id="decryptionError" style="display: none;">Incorrect Password!</div>
+<div id="noContentError" style="display: none;">No content to display!</div>
+<div id="encrypt-blog" style="display:none">
+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
+</div>
+<script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
       
     </div>
 
@@ -584,17 +568,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -727,23 +702,6 @@
         </div>
       </div>
 
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#起因"><span class="nav-number">1.</span> <span class="nav-text">起因</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#研究"><span class="nav-number">2.</span> <span class="nav-text">研究</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
       
 	  
 	  <p><br></p>

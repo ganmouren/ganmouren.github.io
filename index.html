@@ -417,7 +417,7 @@
                 
               
 
-              <time title="创建时间：2020-03-24 20:45:39 / 修改时间：21:12:43" itemprop="dateCreated datePublished" datetime="2020-03-24T20:45:39+08:00">2020-03-24</time>
+              <time title="创建时间：2020-03-24 20:45:39 / 修改时间：21:14:10" itemprop="dateCreated datePublished" datetime="2020-03-24T20:45:39+08:00">2020-03-24</time>
             
 
             
@@ -457,38 +457,16 @@
 
       
         
+          此文章已被加密，请输入密码。
+          <!--noindex-->
           
-            <h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>起因是这样的：</p>
-<p>有一天我们文综老师 $\text{ly}$ 下课布置作业的时候突然被踢下去了</p>
-<p>于是我们一堆人开始研究如何登别人的号</p>
-<p>结果秘密就藏在网址里…</p>
-<h1 id="研究"><a href="#研究" class="headerlink" title="研究"></a>研究</h1><p>我们先来看一段上课的网址（随便搞了一节课）</p>
-<blockquote>
-<p><a href="https://lesson.leke.cn/auth/common/lesson/play.htm?udata=eyJjb3Vyc2VTaW5nbGVJZCI6IjEwMTc1OTA5Iiwicm9sZUlkIjoiMTAwIiwidXNlcklkIjoiMTY4NTgzNCIsInRpY2tldCI6IlZGZHdibEJSUFQwN1MwTlJhMHhUWjNaS1EydHJTMmt3UFRzeU9ESTQiLCJjb3Vyc2VUeXBlIjoxfQ==" target="_blank" rel="noopener">https://lesson.leke.cn/auth/common/lesson/play.htm?udata=eyJjb3Vyc2VTaW5nbGVJZCI6IjEwMTc1OTA5Iiwicm9sZUlkIjoiMTAwIiwidXNlcklkIjoiMTY4NTgzNCIsInRpY2tldCI6IlZGZHdibEJSUFQwN1MwTlJhMHhUWjNaS1EydHJTMmt3UFRzeU9ESTQiLCJjb3Vyc2VUeXBlIjoxfQ==</a></p>
-</blockquote>
-<p>注意到后面的 $\text{udata}$</p>
-<blockquote>
-<p>eyJjb3Vyc2VTaW5nbGVJZCI6IjEwMTc1OTA5Iiwicm9sZUlkIjoiMTAwIiwidXNlcklkIjoiMTY4NTgzNCIsInRpY2tldCI6IlZGZHdibEJSUFQwN1MwTlJhMHhUWjNaS1EydHJTMmt3UFRzeU9ESTQiLCJjb3Vyc2VUeXBlIjoxfQ==</p>
-</blockquote>
-<p>这玩意儿像啥？$\text{base64}$ …</p>
-<p>解密出来是这样的</p>
-<blockquote>
-<p>{“courseSingleId”:”10175909”,”roleId”:”100”,”userId”:”1685834”,”ticket”:”VFdwblBRPT07S0NRa0xTZ3ZKQ2trS2kwPTsyODI4”,”courseType”:1}</p>
-</blockquote>
-<p>太明显了…</p>
-<blockquote>
-<ul>
-<li>$\text{courseSingleId}$ 应该是这节课的 $\text{Id}$</li>
-<li>$\text{roleID}$ 不知道什么玩意儿， $100$ 是学生 $101$ 是老师</li>
-<li>$\text{userID}$ 就是用户 $\text{ID}$</li>
-<li>$\text{ticket}$ 并没发现有什么锤子用…</li>
-<li>$\text{courseType}$ $\text{0}$ 是游客（据说）$\text{1}$ 是学生 $\text{2}$ 是老师</li>
-</ul>
-</blockquote>
-<p>然后我们调整一遍这个玩意儿，加密回去输到网址里就完事儿了</p>
-<p>关于 $\text{userID}$ 可以在那个人的个人界面检查元素 $\text{+ ctrl F}$ 搜索获得…</p>
-
+            <div class="post-button text-center">
+              <a class="btn" href="/how_to_hack_leke/" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           
+          <!--/noindex-->
         
       
     </div>
