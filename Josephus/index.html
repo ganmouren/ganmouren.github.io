@@ -491,19 +491,19 @@
 <p>综合一下，第一个出圈的人的编号绝对为 $(m - 1) \bmod n$</p>
 <p>方便起见，我们设 $k - 1 = (m - 1) \bmod n$ 。</p>
 <p>于是这个圈就变成了这样：</p>
-<p>$k \quad k+1 \quad k+2 \quad … \quad n-2 \quad n-1 \quad 0 \quad 1 \quad 2 \quad … \quad k-3 \quad k-2$</p>
+<p>$k \quad k+1 \quad k+2 \quad ... \quad n-2 \quad n-1 \quad 0 \quad 1 \quad 2 \quad ... \quad k-3 \quad k-2$</p>
 <p>这个时候我们将这个圈转换一下，变成:</p>
-<p>$0 \quad 1 \quad 2 \quad … \quad n - 3 \quad n - 2$</p>
+<p>$0 \quad 1 \quad 2 \quad ... \quad n - 3 \quad n - 2$</p>
 <p>可以发现其实这个问题变成了 $n-1$ 个人报数的子问题。</p>
 <p>所以我们只要将子问题的答案转换回去，就能知道最后那个人原来的编号。</p>
 <p>稍微观察一下如何转换回去:</p>
 <p>$0 \Rightarrow k$</p>
 <p>$1 \Rightarrow k + 1$</p>
-<p>$…$</p>
+<p>$...$</p>
 <p>$n - k - 1 \Rightarrow n - 1$</p>
 <p>$n - k \Rightarrow 0$</p>
 <p>$n - k + 1 \Rightarrow 1$</p>
-<p>$…$</p>
+<p>$...$</p>
 <p>$n - 3\Rightarrow k - 3$</p>
 <p>$n - 2 \Rightarrow k - 2$</p>
 <p>不难发现 $x$ 转换回去后就变成了 $(x + k) \bmod n$</p>
