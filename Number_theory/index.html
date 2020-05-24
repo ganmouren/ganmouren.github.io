@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="这里会简单记录我学习的基础数论。这里的证明可能都不大严谨，仅供参考。 欧几里得算法如果我们想要求 $gcd(a,b)(a\text{与}b$的最大公因数$)$ ，最简单的方式便是枚举，但这太慢了。 于是我们有了我们的辗转相除法，也就是欧几里得算法，它可以在 $O(log(a+b))$ 的复杂度内求出 $gcd(a,b)$ 。 $$\forall a,b \in \mathbb{N}, b \not">
+  <meta name="description" content="这里会简单记录我学习的基础数论。这里的证明可能都不大严谨，仅供参考。 欧几里得算法如果我们想要求 $gcd(a,b)$ ，最简单的方式便是枚举，但这太慢了。 于是我们有了我们的辗转相除法，也就是欧几里得算法，它可以在 $O(log(a+b))$ 的复杂度内求出 $gcd(a,b)$ 。 $$\forall a,b \in \mathbb{N}, b \not = 0,\quad gcd(a,b)">
 <meta name="keywords" content="OI,数论">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数论学习">
 <meta property="og:url" content="http://yoursite.com/Number_theory/index.html">
 <meta property="og:site_name" content="甘某人の博客">
-<meta property="og:description" content="这里会简单记录我学习的基础数论。这里的证明可能都不大严谨，仅供参考。 欧几里得算法如果我们想要求 $gcd(a,b)(a\text{与}b$的最大公因数$)$ ，最简单的方式便是枚举，但这太慢了。 于是我们有了我们的辗转相除法，也就是欧几里得算法，它可以在 $O(log(a+b))$ 的复杂度内求出 $gcd(a,b)$ 。 $$\forall a,b \in \mathbb{N}, b \not">
+<meta property="og:description" content="这里会简单记录我学习的基础数论。这里的证明可能都不大严谨，仅供参考。 欧几里得算法如果我们想要求 $gcd(a,b)$ ，最简单的方式便是枚举，但这太慢了。 于是我们有了我们的辗转相除法，也就是欧几里得算法，它可以在 $O(log(a+b))$ 的复杂度内求出 $gcd(a,b)$ 。 $$\forall a,b \in \mathbb{N}, b \not = 0,\quad gcd(a,b)">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-23T13:18:01.330Z">
+<meta property="og:updated_time" content="2020-05-20T13:57:06.101Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数论学习">
-<meta name="twitter:description" content="这里会简单记录我学习的基础数论。这里的证明可能都不大严谨，仅供参考。 欧几里得算法如果我们想要求 $gcd(a,b)(a\text{与}b$的最大公因数$)$ ，最简单的方式便是枚举，但这太慢了。 于是我们有了我们的辗转相除法，也就是欧几里得算法，它可以在 $O(log(a+b))$ 的复杂度内求出 $gcd(a,b)$ 。 $$\forall a,b \in \mathbb{N}, b \not">
+<meta name="twitter:description" content="这里会简单记录我学习的基础数论。这里的证明可能都不大严谨，仅供参考。 欧几里得算法如果我们想要求 $gcd(a,b)$ ，最简单的方式便是枚举，但这太慢了。 于是我们有了我们的辗转相除法，也就是欧几里得算法，它可以在 $O(log(a+b))$ 的复杂度内求出 $gcd(a,b)$ 。 $$\forall a,b \in \mathbb{N}, b \not = 0,\quad gcd(a,b)">
 
 
 
@@ -433,7 +433,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-23 21:18:01" itemprop="dateModified" datetime="2019-08-23T21:18:01+08:00">2019-08-23</time>
+                <time title="修改时间：2020-05-20 21:57:06" itemprop="dateModified" datetime="2020-05-20T21:57:06+08:00">2020-05-20</time>
               
             
           </span>
@@ -475,7 +475,7 @@
 
       
         <p>这里会简单记录我学习的基础数论。这里的证明可能都不大严谨，仅供参考。</p>
-<h1 id="欧几里得算法"><a href="#欧几里得算法" class="headerlink" title="欧几里得算法"></a>欧几里得算法</h1><p>如果我们想要求 $gcd(a,b)(a\text{与}b$的最大公因数$)$ ，最简单的方式便是枚举，但这太慢了。</p>
+<h1 id="欧几里得算法"><a href="#欧几里得算法" class="headerlink" title="欧几里得算法"></a>欧几里得算法</h1><p>如果我们想要求 $gcd(a,b)$ ，最简单的方式便是枚举，但这太慢了。</p>
 <p>于是我们有了我们的辗转相除法，也就是欧几里得算法，它可以在 $O(log(a+b))$ 的复杂度内求出 $gcd(a,b)$ 。</p>
 <p>$$\forall a,b \in \mathbb{N}, b \not = 0,\quad gcd(a,b) = gcd(b,a\bmod b)$$</p>
 <h2 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h2><p>$a &lt; b$ 时</p>
@@ -667,7 +667,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">20</span>
+                    <span class="site-state-item-count">21</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -816,7 +816,7 @@
 	      <h3 class="widget-title">标签云</h3>
 		  <div id="myCanvasContainer" class="widget tagcloud">
 			<canvas width="150" height="150" id="resCanvas" style="width=100%">
-				<ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Arknights/">Arknights</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSP/">CSP</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LCA/">LCA</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Luogu/">Luogu</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OI/">OI</a><span class="tag-list-count">12</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/R18/">R18</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dfs/">dfs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/galgame/">galgame</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/loj/">loj</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二次元/">二次元</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二维前缀和/">二维前缀和</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/倍增/">倍增</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/写作/">写作</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分层图/">分层图</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/剪枝/">剪枝</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构/">数据结构</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数论/">数论</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/暴力/">暴力</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/最小生成树/">最小生成树</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/最短路/">最短路</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/树状数组/">树状数组</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/测试/">测试</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活/">生活</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/线段树/">线段树</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/题解/">题解</a><span class="tag-list-count">7</span></li></ul>
+				<ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Arknights/">Arknights</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSP/">CSP</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LCA/">LCA</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Luogu/">Luogu</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OI/">OI</a><span class="tag-list-count">12</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/R18/">R18</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dfs/">dfs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/galgame/">galgame</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/loj/">loj</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二次元/">二次元</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二维前缀和/">二维前缀和</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/倍增/">倍增</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/写作/">写作</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分层图/">分层图</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/剪枝/">剪枝</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构/">数据结构</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数论/">数论</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/暴力/">暴力</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/最小生成树/">最小生成树</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/最短路/">最短路</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/树状数组/">树状数组</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/测试/">测试</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活/">生活</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/线段树/">线段树</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/题解/">题解</a><span class="tag-list-count">7</span></li></ul>
 			</canvas>
 		  </div>
 	    </div>
