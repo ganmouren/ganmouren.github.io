@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>喜报！</title>
+    <url>/first_article/</url>
+    <content><![CDATA[<p>在本蒟蒻的不懈努力下...这个博客也算是勉强搭成了，花了好久...感谢网上各位大佬帮助 $QAQ$</p>
+]]></content>
+      <tags>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>再生</title>
+    <url>/reborn/</url>
+    <content><![CDATA[<p>如你所见，这个博客重生了。</p>
+<p>话说距我创建这个 $\mathrm{blog}$ 竟然已经过去了八年了，吓人。</p>
+<p>之前有一坨黑历史实在看不下去了我自己私藏了，包括但不限于神秘 $\mathrm{R18}$ 同人文，抄袭的题解，二次元嘉豪。</p>
+<p>突发奇想就把这玩意拉出来搞了半天，在豆包大人的帮助下很快就重建好了，虽然有些功能没了，但是问题不大。</p>
+<p>今后希望能多写一些有用的事情。</p>
+<img src="/reborn/%E4%BA%9A%E9%BA%BB%E8%89%B2%E5%A4%B4%E5%8F%91%E7%9A%84%E5%B0%91%E5%A5%B3.png" class="">]]></content>
+      <tags>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2026ICPC 西安邀请赛游记</title>
     <url>/2026-icpc-xian-invitational/</url>
     <content><![CDATA[<p>这段时间因为保研的事情一直在焦虑，还是蛮期待这场比赛的，可以全身心地投入，权当放松了。</p>
@@ -38,7 +60,8 @@
 <p><img src="/2026-icpc-xian-invitational/MEITU_20260502_172728408.jpg" alt="队名"></p>
 <p>队名小巧思之 $\rm{hitorie}$</p>
 <p><img src="/2026-icpc-xian-invitational/IMG_20260502_172033.jpg" alt="奖牌"></p>
-<p>最后应该是全场 $\rm{rk20}$ ，比较好玩的是我们队 $\rm{8}$ 题罚时 $\rm{888}$，最吉利的一集。</p>
+<p>最后应该是全场 $\rm{rk20}$ ，正式队伍 $\rm{rk13}\rightarrow\rm{rk10}$ ，校排 $\rm{rk10}$ ，比较好玩的是我们队 $\rm{8}$ 题罚时 $\rm{888}$，最吉利的一集。</p>
+<p><img src="/2026-icpc-xian-invitational/%E6%AD%A3%E5%BC%8F%E8%B5%9B.png" alt="正式赛"></p>
 <p>这段时间真的玉玉似了，首先室友依旧每天鬼椒，然后每天上上网又感觉自己这 $\rm{bg}$ 没学上了，打这个比赛算是一种调节心情的方式了。</p>
 <p>努力熬过这段时间吧，以及下半年区域赛要加油啊！</p>
 ]]></content>
@@ -123,28 +146,6 @@
 ]]></content>
       <tags>
         <tag>CSP</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>喜报！</title>
-    <url>/first_article/</url>
-    <content><![CDATA[<p>在本蒟蒻的不懈努力下...这个博客也算是勉强搭成了，花了好久...感谢网上各位大佬帮助 $QAQ$</p>
-]]></content>
-      <tags>
-        <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>再生</title>
-    <url>/reborn/</url>
-    <content><![CDATA[<p>如你所见，这个博客重生了。</p>
-<p>话说距我创建这个 $\mathrm{blog}$ 竟然已经过去了八年了，吓人。</p>
-<p>之前有一坨黑历史实在看不下去了我自己私藏了，包括但不限于神秘 $\mathrm{R18}$ 同人文，抄袭的题解，二次元嘉豪。</p>
-<p>突发奇想就把这玩意拉出来搞了半天，在豆包大人的帮助下很快就重建好了，虽然有些功能没了，但是问题不大。</p>
-<p>今后希望能多写一些有用的事情。</p>
-<img src="/reborn/%E4%BA%9A%E9%BA%BB%E8%89%B2%E5%A4%B4%E5%8F%91%E7%9A%84%E5%B0%91%E5%A5%B3.png" class="">]]></content>
-      <tags>
-        <tag>博客</tag>
       </tags>
   </entry>
 </search>
