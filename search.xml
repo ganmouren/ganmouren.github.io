@@ -1,75 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>喜报！</title>
-    <url>/first_article/</url>
-    <content><![CDATA[<p>在本蒟蒻的不懈努力下...这个博客也算是勉强搭成了，花了好久...感谢网上各位大佬帮助 $QAQ$</p>
-]]></content>
-      <tags>
-        <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>再生</title>
-    <url>/reborn/</url>
-    <content><![CDATA[<p>如你所见，这个博客重生了。</p>
-<p>话说距我创建这个 $\mathrm{blog}$ 竟然已经过去了八年了，吓人。</p>
-<p>之前有一坨黑历史实在看不下去了我自己私藏了，包括但不限于神秘 $\mathrm{R18}$ 同人文，抄袭的题解，二次元嘉豪。</p>
-<p>突发奇想就把这玩意拉出来搞了半天，在豆包大人的帮助下很快就重建好了，虽然有些功能没了，但是问题不大。</p>
-<p>今后希望能多写一些有用的事情。</p>
-<img src="/reborn/%E4%BA%9A%E9%BA%BB%E8%89%B2%E5%A4%B4%E5%8F%91%E7%9A%84%E5%B0%91%E5%A5%B3.png" class="">]]></content>
-      <tags>
-        <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2026ICPC 西安邀请赛游记</title>
-    <url>/2026-icpc-xian-invitational/</url>
-    <content><![CDATA[<p>这段时间因为保研的事情一直在焦虑，还是蛮期待这场比赛的，可以全身心地投入，权当放松了。</p>
-<span id="more"></span>
-
-<p>因为西安邀请赛，$\rm{jxf}$ 坐镇，毫无疑问在我们学校打了。甚至我们队地点就在我们机房，这就是传说中的主场作战吗。</p>
-<h1 id="Day-0"><a href="#Day-0" class="headerlink" title="Day 0"></a>Day 0</h1><p>下午三个人在图书馆约了个研修间补了补题，感觉还是蛮开心的。做题还是可以专注思考，忘掉那些杂七杂八的事的。</p>
-<blockquote>
-<p>$\rm{The\ Brain\ is\ wider\ than\ the\ Sky}$<br>$\rm{—Emily\ Dickinson}$</p>
-</blockquote>
-<p><img src="/2026-icpc-xian-invitational/MEITU_20260502_175744689.jpg" alt="补题"></p>
-<p>第一次知道还有 $\rm{SG}$ 函数这个东西，惊叹于古人智慧。</p>
-<p>去实验大楼签了到拍了照，可惜忘了带千早爱音。</p>
-<p>然后去云餐食饭，竟然是自选随便拿。可惜我拿少了。血亏。</p>
-<p><img src="/2026-icpc-xian-invitational/IMG_20260501_175119.jpg" alt="饭"></p>
-<p>晚上睡得一坨史。这段时间睡眠太不规律了吧，这周都是平均七点睡的，每天不是在做 $\rm{mad}$ 就是在干一些莫名其妙的事。这次罕见早睡了一次，睡得非常难蚌，半夜还醒了看了两个小时本子。</p>
-<p><img src="/2026-icpc-xian-invitational/qq_pic_merged_1777715996687.jpg" alt="三人就这样"></p>
-<h1 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h1><p>七点半起床吃了个早饭去场地。</p>
-<p><img src="/2026-icpc-xian-invitational/IMG_20260502_075833.jpg" alt="早饭"></p>
-<p>早上八点到九点半热身赛，$\rm{B}$ 想出来没调出来，是个什么 $\rm{if\ else}$ 模拟题。</p>
-<p>实验大楼厕所客最满的一次。</p>
-<p>十点就开始正式赛了。</p>
-<p>拆封题目。</p>
-<p>作为手速大王我直接开始狂签到，$\rm{E}$ 题大 $\rm{sb}$ 题 $\rm{map}$ 统计一下，$\rm{4\ min}$ 签了。$\rm{D}$ 题一看我曹 $\rm{Generals}$ ，这个我熟，不是很难的数学，$\rm{18\ min}$ 给签了。$\rm{J}$ 题一看这你妈怎么感觉之前做过，木棍围三角形，双指针搞一搞就好了。$\rm{32\ min}$ 签了。$\rm{A}$ 题前缀和转化一下变成那个典中典搭积木问题了，上去写了就秒了。这时候 $\rm{1h}$ 。</p>
-<p>原来我连签了四题，，谁见了我不喊一声签到大王。</p>
-<p>可惜的是当时大小胖恩把 $\rm{B}$ 秒了，我急着写 $\rm{A}$ 把他赶下来了，导致没抢到一血。$\rm{My\ Fault}$ 。我过了 $\rm{A}$ 他马上把 $\rm{B}$ 过了。</p>
-<p>然后开始坐牢。看大伙都几把在写 $\rm{L}$ 我也开始想，想了一万年没想出来。</p>
-<p>$\rm{lyx}$ 发力和大小胖恩在 $\rm{2:27}$ 把 $\rm{I}$ 秒了，我根本没懂反正。</p>
-<p>前六题都是 $\rm{1a}$ ，有点爽。</p>
-<p>然后我想了半天 $\rm{C}$ 推出一个结论，跟 $\rm{lyx}$ 讨论了一下发现区间 $\rm{dp}$ 可以直接做，就开始写。三个半小时的时候开交，因为 $\rm{memset}$ $\rm{T}$ 了一发，难蚌，然后再交还是 $\rm{WA}$，$\rm{4}$ 小时的时候才想出来有个全是左或者右括号的 $\rm{sb}$ 情况。特判了一下过了。</p>
-<p>封榜。</p>
-<p>四个半小时的时候 $\rm{lyx}$ 和大小胖恩把 $\rm{L}$ 过了，我们三人一起想 $\rm{M}$ ，最后还是没能卡到 $\rm{10n}$ ，就这样吧。</p>
-<p><img src="/2026-icpc-xian-invitational/IMG_20260502_150342.jpg" alt="现场"></p>
-<p>感觉还是状态不错的，水题比较多，手速发挥优势，然后队友再发一波力带我飞。爽了。</p>
-<p><img src="/2026-icpc-xian-invitational/MEITU_20260502_172728408.jpg" alt="队名"></p>
-<p>队名小巧思之 $\rm{hitorie}$</p>
-<p><img src="/2026-icpc-xian-invitational/IMG_20260502_172033.jpg" alt="奖牌"></p>
-<p>最后应该是全场 $\rm{rk20}$ ，正式队伍 $\rm{rk13}\rightarrow\rm{rk10}$ ，校排 $\rm{rk10}$ ，比较好玩的是我们队 $\rm{8}$ 题罚时 $\rm{888}$，最吉利的一集。</p>
-<p><img src="/2026-icpc-xian-invitational/%E6%AD%A3%E5%BC%8F%E8%B5%9B.png" alt="正式赛"></p>
-<p>这段时间真的玉玉似了，首先室友依旧每天鬼椒，然后每天上上网又感觉自己这 $\rm{bg}$ 没学上了，打这个比赛算是一种调节心情的方式了。</p>
-<p>努力熬过这段时间吧，以及下半年区域赛要加油啊！</p>
-]]></content>
-      <tags>
-        <tag>ICPC</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CSP2019游记</title>
     <url>/csp2019/</url>
     <content><![CDATA[<p>记录一下自己的爆零历程。</p>
@@ -146,6 +77,75 @@
 ]]></content>
       <tags>
         <tag>CSP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>再生</title>
+    <url>/reborn/</url>
+    <content><![CDATA[<p>如你所见，这个博客重生了。</p>
+<p>话说距我创建这个 $\mathrm{blog}$ 竟然已经过去了八年了，吓人。</p>
+<p>之前有一坨黑历史实在看不下去了我自己私藏了，包括但不限于神秘 $\mathrm{R18}$ 同人文，抄袭的题解，二次元嘉豪。</p>
+<p>突发奇想就把这玩意拉出来搞了半天，在豆包大人的帮助下很快就重建好了，虽然有些功能没了，但是问题不大。</p>
+<p>今后希望能多写一些有用的事情。</p>
+<img src="/reborn/%E4%BA%9A%E9%BA%BB%E8%89%B2%E5%A4%B4%E5%8F%91%E7%9A%84%E5%B0%91%E5%A5%B3.png" class="">]]></content>
+      <tags>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2026ICPC 西安邀请赛游记</title>
+    <url>/2026-icpc-xian-invitational/</url>
+    <content><![CDATA[<p>这段时间因为保研的事情一直在焦虑，还是蛮期待这场比赛的，可以全身心地投入，权当放松了。</p>
+<span id="more"></span>
+
+<p>因为西安邀请赛，$\rm{jxf}$ 坐镇，毫无疑问在我们学校打了。甚至我们队地点就在我们机房，这就是传说中的主场作战吗。</p>
+<h1 id="Day-0"><a href="#Day-0" class="headerlink" title="Day 0"></a>Day 0</h1><p>下午三个人在图书馆约了个研修间补了补题，感觉还是蛮开心的。做题还是可以专注思考，忘掉那些杂七杂八的事的。</p>
+<blockquote>
+<p>$\rm{The\ Brain\ is\ wider\ than\ the\ Sky}$<br>$\rm{—Emily\ Dickinson}$</p>
+</blockquote>
+<p><img src="/2026-icpc-xian-invitational/MEITU_20260502_175744689.jpg" alt="补题"></p>
+<p>第一次知道还有 $\rm{SG}$ 函数这个东西，惊叹于古人智慧。</p>
+<p>去实验大楼签了到拍了照，可惜忘了带千早爱音。</p>
+<p>然后去云餐食饭，竟然是自选随便拿。可惜我拿少了。血亏。</p>
+<p><img src="/2026-icpc-xian-invitational/IMG_20260501_175119.jpg" alt="饭"></p>
+<p>晚上睡得一坨史。这段时间睡眠太不规律了吧，这周都是平均七点睡的，每天不是在做 $\rm{mad}$ 就是在干一些莫名其妙的事。这次罕见早睡了一次，睡得非常难蚌，半夜还醒了看了两个小时本子。</p>
+<p><img src="/2026-icpc-xian-invitational/qq_pic_merged_1777715996687.jpg" alt="三人就这样"></p>
+<h1 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h1><p>七点半起床吃了个早饭去场地。</p>
+<p><img src="/2026-icpc-xian-invitational/IMG_20260502_075833.jpg" alt="早饭"></p>
+<p>早上八点到九点半热身赛，$\rm{B}$ 想出来没调出来，是个什么 $\rm{if\ else}$ 模拟题。</p>
+<p>实验大楼厕所客最满的一次。</p>
+<p>十点就开始正式赛了。</p>
+<p>拆封题目。</p>
+<p>作为手速大王我直接开始狂签到，$\rm{E}$ 题大 $\rm{sb}$ 题 $\rm{map}$ 统计一下，$\rm{4\ min}$ 签了。$\rm{D}$ 题一看我曹 $\rm{Generals}$ ，这个我熟，不是很难的数学，$\rm{18\ min}$ 给签了。$\rm{J}$ 题一看这你妈怎么感觉之前做过，木棍围三角形，双指针搞一搞就好了。$\rm{32\ min}$ 签了。$\rm{A}$ 题前缀和转化一下变成那个典中典搭积木问题了，上去写了就秒了。这时候 $\rm{1h}$ 。</p>
+<p>原来我连签了四题，，谁见了我不喊一声签到大王。</p>
+<p>可惜的是当时大小胖恩把 $\rm{B}$ 秒了，我急着写 $\rm{A}$ 把他赶下来了，导致没抢到一血。$\rm{My\ Fault}$ 。我过了 $\rm{A}$ 他马上把 $\rm{B}$ 过了。</p>
+<p>然后开始坐牢。看大伙都几把在写 $\rm{L}$ 我也开始想，想了一万年没想出来。</p>
+<p>$\rm{lyx}$ 发力和大小胖恩在 $\rm{2:27}$ 把 $\rm{I}$ 秒了，我根本没懂反正。</p>
+<p>前六题都是 $\rm{1a}$ ，有点爽。</p>
+<p>然后我想了半天 $\rm{C}$ 推出一个结论，跟 $\rm{lyx}$ 讨论了一下发现区间 $\rm{dp}$ 可以直接做，就开始写。三个半小时的时候开交，因为 $\rm{memset}$ $\rm{T}$ 了一发，难蚌，然后再交还是 $\rm{WA}$，$\rm{4}$ 小时的时候才想出来有个全是左或者右括号的 $\rm{sb}$ 情况。特判了一下过了。</p>
+<p>封榜。</p>
+<p>四个半小时的时候 $\rm{lyx}$ 和大小胖恩把 $\rm{L}$ 过了，我们三人一起想 $\rm{M}$ ，最后还是没能卡到 $\rm{10n}$ ，就这样吧。</p>
+<p><img src="/2026-icpc-xian-invitational/IMG_20260502_150342.jpg" alt="现场"></p>
+<p>感觉还是状态不错的，水题比较多，手速发挥优势，然后队友再发一波力带我飞。爽了。</p>
+<p><img src="/2026-icpc-xian-invitational/MEITU_20260502_172728408.jpg" alt="队名"></p>
+<p>队名小巧思之 $\rm{hitorie}$</p>
+<p><img src="/2026-icpc-xian-invitational/IMG_20260502_172033.jpg" alt="奖牌"></p>
+<p>最后应该是全场 $\rm{rk20}$ ，正式队伍 $\rm{rk13}\rightarrow\rm{rk11}$ ，校排 $\rm{rk10}$ ，比较好玩的是我们队 $\rm{8}$ 题罚时 $\rm{888}$，最吉利的一集。</p>
+<p><img src="/2026-icpc-xian-invitational/%E6%AD%A3%E5%BC%8F%E8%B5%9B.png" alt="正式赛"></p>
+<p>这段时间真的玉玉似了，首先室友依旧每天鬼椒，然后每天上上网又感觉自己这 $\rm{bg}$ 没学上了，打这个比赛算是一种调节心情的方式了。</p>
+<p>努力熬过这段时间吧，以及下半年区域赛要加油啊！</p>
+]]></content>
+      <tags>
+        <tag>ICPC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>喜报！</title>
+    <url>/first_article/</url>
+    <content><![CDATA[<p>在本蒟蒻的不懈努力下...这个博客也算是勉强搭成了，花了好久...感谢网上各位大佬帮助 $QAQ$</p>
+]]></content>
+      <tags>
+        <tag>博客</tag>
       </tags>
   </entry>
 </search>
